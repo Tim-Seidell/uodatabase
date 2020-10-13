@@ -1,0 +1,70 @@
+Date : 2020-09-14 20:35:37
+Directory : c:\xampp\htdocs\uodatabase
+Total : 41 files,  1661 codes, 90 comments, 332 blanks, all 2083 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| PHP      |         36 |      1,436 |         75 |        294 |      1,805 |
+| CSS      |          1 |        181 |          5 |         28 |        214 |
+| HTML     |          2 |         35 |         10 |         10 |         55 |
+| JSON     |          2 |          9 |          0 |          0 |          9 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                              | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                 |         41 |      1,661 |         90 |        332 |      2,083 |
+| .vs                                                               |          2 |          9 |          0 |          0 |          9 |
+| includes                                                          |         22 |        587 |         75 |        128 |        790 |
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                          | language | code       | comment    | blank      | total      |
++-------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\xampp\htdocs\uodatabase\.vs\ProjectSettings.json               | JSON     |          3 |          0 |          0 |          3 |
+| c:\xampp\htdocs\uodatabase\.vs\VSWorkspaceState.json              | JSON     |          6 |          0 |          0 |          6 |
+| c:\xampp\htdocs\uodatabase\addCadet.php                           | PHP      |         38 |          0 |          5 |         43 |
+| c:\xampp\htdocs\uodatabase\cadetView.php                          | PHP      |         75 |          0 |         13 |         88 |
+| c:\xampp\htdocs\uodatabase\cadets.php                             | PHP      |         56 |          0 |         10 |         66 |
+| c:\xampp\htdocs\uodatabase\custom.css                             | CSS      |        181 |          5 |         28 |        214 |
+| c:\xampp\htdocs\uodatabase\editInventory.php                      | PHP      |        117 |          0 |         26 |        143 |
+| c:\xampp\htdocs\uodatabase\footer.php                             | PHP      |          3 |          0 |          0 |          3 |
+| c:\xampp\htdocs\uodatabase\header.php                             | PHP      |         49 |          0 |         10 |         59 |
+| c:\xampp\htdocs\uodatabase\includes\addCadet.inc.php              | PHP      |         14 |          4 |          5 |         23 |
+| c:\xampp\htdocs\uodatabase\includes\addColumn.inc.php             | PHP      |          9 |          0 |          3 |         12 |
+| c:\xampp\htdocs\uodatabase\includes\addTable.inc.php              | PHP      |         16 |          4 |          4 |         24 |
+| c:\xampp\htdocs\uodatabase\includes\addToEdit.inc.php             | PHP      |         10 |          1 |          3 |         14 |
+| c:\xampp\htdocs\uodatabase\includes\addToOrder.inc.php            | PHP      |         10 |          1 |          3 |         14 |
+| c:\xampp\htdocs\uodatabase\includes\cancelEdit.inc.php            | PHP      |          8 |          3 |          6 |         17 |
+| c:\xampp\htdocs\uodatabase\includes\cancelOrder.inc.php           | PHP      |          8 |          3 |          3 |         14 |
+| c:\xampp\htdocs\uodatabase\includes\dbh.inc.php                   | PHP      |          6 |          0 |          2 |          8 |
+| c:\xampp\htdocs\uodatabase\includes\editInventory.inc.php         | PHP      |         52 |         10 |         15 |         77 |
+| c:\xampp\htdocs\uodatabase\includes\editPersonalInventory.inc.php | PHP      |         72 |          1 |          8 |         81 |
+| c:\xampp\htdocs\uodatabase\includes\functions.inc.php             | PHP      |         70 |          9 |         13 |         92 |
+| c:\xampp\htdocs\uodatabase\includes\login.inc.php                 | PHP      |         47 |          0 |          4 |         51 |
+| c:\xampp\htdocs\uodatabase\includes\logout.inc.php                | PHP      |          7 |          0 |          0 |          7 |
+| c:\xampp\htdocs\uodatabase\includes\nameOrder.inc.php             | PHP      |         47 |          6 |         13 |         66 |
+| c:\xampp\htdocs\uodatabase\includes\placeOrder.inc.php            | PHP      |          7 |          0 |          3 |         10 |
+| c:\xampp\htdocs\uodatabase\includes\removeCadet.inc.php           | PHP      |         12 |          4 |          4 |         20 |
+| c:\xampp\htdocs\uodatabase\includes\removeColumn.inc.php          | PHP      |          8 |          0 |          3 |         11 |
+| c:\xampp\htdocs\uodatabase\includes\removeTable.inc.php           | PHP      |          9 |          0 |          3 |         12 |
+| c:\xampp\htdocs\uodatabase\includes\signup.inc.php                | PHP      |         58 |          3 |          3 |         64 |
+| c:\xampp\htdocs\uodatabase\includes\submitOrder.inc.php           | PHP      |         67 |         19 |         16 |        102 |
+| c:\xampp\htdocs\uodatabase\includes\swipeOrder.inc.php            | PHP      |         50 |          7 |         13 |         70 |
+| c:\xampp\htdocs\uodatabase\includes\viewCadet.inc.php             | PHP      |          0 |          0 |          1 |          1 |
+| c:\xampp\htdocs\uodatabase\index.php                              | PHP      |         43 |          0 |         19 |         62 |
+| c:\xampp\htdocs\uodatabase\individualCadet.php                    | PHP      |         82 |          0 |         15 |         97 |
+| c:\xampp\htdocs\uodatabase\inventory.php                          | PHP      |         83 |          0 |         14 |         97 |
+| c:\xampp\htdocs\uodatabase\manageTables.php                       | PHP      |        103 |          0 |         13 |        116 |
+| c:\xampp\htdocs\uodatabase\newOrder.php                           | PHP      |        123 |          0 |         29 |        152 |
+| c:\xampp\htdocs\uodatabase\removeCadet.php                        | PHP      |         30 |          0 |          5 |         35 |
+| c:\xampp\htdocs\uodatabase\report.html                            | HTML     |         19 |          5 |          4 |         28 |
+| c:\xampp\htdocs\uodatabase\signup.php                             | PHP      |         26 |          0 |          1 |         27 |
+| c:\xampp\htdocs\uodatabase\template.html                          | HTML     |         16 |          5 |          6 |         27 |
+| c:\xampp\htdocs\uodatabase\template.php                           | PHP      |         21 |          0 |          6 |         27 |
+| Total                                                             |          |      1,661 |         90 |        332 |      2,083 |
++-------------------------------------------------------------------+----------+------------+------------+------------+------------+
