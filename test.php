@@ -30,5 +30,5 @@
         </div>
     </div>
 </div>
-
+<?php $conn ?>
 <?php require 'footer.php' ?>
