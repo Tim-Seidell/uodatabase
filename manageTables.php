@@ -7,17 +7,27 @@
 
         <div class = "row">
             <div class = "col-md text-center">
-                <!-- Create Table -->
-                <h1 class="text">Create Table</h1>
+                <!-- Create New Item -->
+                <h1 class="text">New Item</h1>
                 <hr>
                 <form action="includes/addTable.inc.php" method="POST">
-                    <select class="dropdown" name="table_type" style="width: 230px; height: 43px;">
-                        <option value="">- Select type -</option>
-                        <option value="list_of_uniform_items">Uniform Item</option>
+                    <select name="" id="">
+                        <option value="">- Select Uniform -</option>
+                        <?php dropdownOptions();?>
                     </select>
-                    <input type="text" class="input" name="table_name" placeholder="table_name" style="width: 230px; height: 43px;">
-                    <input type="text" class="input" name="table_display_name" placeholder="Table Name (Optional)" style="width: 230px; height: 43px;">
-                    <button type="submit" class="button button_blue" style="width: 230px;">Create Table</button>
+                    <input type="text" class="input" name="table_name" placeholder="item_name" style="width: 230px; height: 43px;">
+                    <input type="text" class="input" name="table_display_name" placeholder="Item Name" style="width: 230px; height: 43px;">
+                    <button type="submit" class="button button_blue" style="width: 230px;" name = "newItem" value = "newItem">Create New Item</button>
+                </form>
+            </div>
+
+            <div class = "col-md text-center">
+                <!-- Create New Uniform -->
+                <h1 class="text">New Uniform</h1>
+                <hr>
+                <form action="includes/addTable.inc.php" method="POST">
+                    <input type="text" class="input" name="table_display_name" placeholder="uniform_name" style="width: 230px; height: 43px;">
+                    <button type="submit" class="button button_blue" style="width: 230px;" name = "newUniform" value = "newUniform">Create New Uniform</button>
                 </form>
             </div>
 
@@ -30,7 +40,11 @@
                     <button type="submit" class="button button_blue" style="width: 230px;">Remove Table</button>
                 </form>
             </div>
+        </div>
 
+        <div style="padding-top: 50px;"></div>
+
+        <div class = "row">
             <div class = "col-md text-center">
                 <!-- Add Column -->
                 <h1 class="text">Add Column</h1>
@@ -42,11 +56,7 @@
                     <button type="submit" class="button button_blue" style="width: 230px;">Add Column</button>
                 </form>
             </div>
-        </div>
 
-        <div style="padding-top: 50px;"></div>
-
-        <div class = "row">
             <div class = "col-md text-center">
                 <!-- Remove Column -->
                 <h1 class="text">Remove Column</h1>

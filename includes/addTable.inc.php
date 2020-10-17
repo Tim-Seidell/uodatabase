@@ -1,6 +1,19 @@
 <?php
     include_once 'dbh.inc.php';
 
+    if(iiset($_POST['newItem'])) {
+        /* Add new item */
+    } else if() {
+
+    } else {
+        header("Location: ../index.php");
+        exit();
+    }
+
+
+
+/*  Old */
+
     /* Post variables */
     $Table_Display_Name = mysqli_real_escape_string($conn, $_POST['table_display_name']);
     $Table_Name         = mysqli_real_escape_string($conn, $_POST['table_name']);
