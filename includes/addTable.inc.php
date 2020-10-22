@@ -22,7 +22,7 @@
         mysqli_query($conn, $sql);
     } else if(isset($_POST["newUniform"])) {
         $Table_Display_Name = mysqli_real_escape_string($conn, $_POST["table_display_name"]);
-        $Table_Name = $Table_Display_Name . "_items";
+        $Table_Name = strtolower($Table_Display_Name) . "_items";
 
         /* Add to appropriate tables */
         $sql = "INSERT INTO uniforms VALUES (?, ?)";
