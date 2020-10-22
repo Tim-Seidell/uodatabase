@@ -11,12 +11,12 @@
                 <h1 class="text">New Item</h1>
                 <hr>
                 <form action="includes/addTable.inc.php" method="POST">
-                    <select name="" id="">
+                    <select name="uniform" class = "dropdown" style = "width: 230px; height: 43px;">
                         <option value="">- Select Uniform -</option>
-                        <?php dropdownOptions();?>
+                        <?php dropdownOptions("uniforms", "uniform", "uniform_table", "uniform");?>
                     </select>
-                    <input type="text" class="input" name="table_name" placeholder="item_name" style="width: 230px; height: 43px;">
-                    <input type="text" class="input" name="table_display_name" placeholder="Item Name" style="width: 230px; height: 43px;">
+                    <input type="text" class="input" name="item_display_name" placeholder="Item Name" style="width: 230px; height: 43px;">
+                    <input type="text" class="input" name="item_name" placeholder="item_name" style="width: 230px; height: 43px;">
                     <button type="submit" class="button button_blue" style="width: 230px;" name = "newItem" value = "newItem">Create New Item</button>
                 </form>
             </div>
@@ -26,7 +26,8 @@
                 <h1 class="text">New Uniform</h1>
                 <hr>
                 <form action="includes/addTable.inc.php" method="POST">
-                    <input type="text" class="input" name="table_display_name" placeholder="uniform_name" style="width: 230px; height: 43px;">
+                    <input type="text" class="input" name="table_display_name" placeholder="Uniform Name" style="width: 230px; height: 43px;">
+                    <input type="text" class="input" name="table_name" placeholder="uniform_name" style="width: 230px; height: 43px;">
                     <button type="submit" class="button button_blue" style="width: 230px;" name = "newUniform" value = "newUniform">Create New Uniform</button>
                 </form>
             </div>

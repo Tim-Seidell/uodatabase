@@ -43,15 +43,29 @@
                         <option value="add">Add</option>
                         <option value="return">Return</option>
                     </select>
-                    <select name = "item" style = "width: 287px; height: 43px;" class = "dropdown" onchange="this.form.submit()">
-                        <option value="">- Select Item -</option>
-                        <?php dropdownOptions("list_of_uniform_items","item_name","item_table_name"); ?>
+                    <br>
+                    <select name = "uniform" style = "width: 287px; height: 43px;" class = "dropdown" onchange="this.form.submit()">
+                        <option value="">- Uniform -</option>
+                        <?php dropdownDistinct("uniforms"); ?>
                     </select>
                 </form>
 
                 <?php
-                    if(isset($_POST["item"])) {
+                    if(isset($_POST["uniform"])) {
                         $_SESSION["orderType"] = $_POST["orderType"];
+                        $_SESSION["uniform"] = $_POST["uniform"];
+                    }
+                ?>
+
+                <form action="" method="post">
+                    <select name="item" class = "dropdown" style = "width: 287px; height: 43px;" onchange="this.form.submit()">
+                        <option value="">- Item -</option>
+                        <?php dropdownOptions($_SESSION["uniform"],"uniform","uniform_name", "uniform"); ?>
+                    </select>
+                </form>
+                
+                <?php
+                    if(isset($_POST["item"])) {
                         $_SESSION["item"] = $_POST["item"];
                     }
                 ?>
@@ -59,11 +73,11 @@
                 <form action="includes/editPersonalInventory.inc.php" method = "post">
                     <select name = "size" style = "width: 287px; height: 43px;" class = "dropdown">
                         <option value="">- Size -</option>
-                        <?php dropdownOptions($_SESSION["item"],"size","size"); ?>
+                        <?php dropdownOptions($_SESSION["item"],"size","size", "size"); ?>
                     </select>
-
+                    <br>
                     <input type="number" placeholder = "Quantity" name = "quantity" class = "input" style = "width: 287px; height: 43px;">
-
+                    <br>
                     <input type="submit" class = "button button_blue" value = "submit" style = "width: 287px;">
                 </form>
             </div>
@@ -88,17 +102,27 @@
                 <div class = "container">
                     <div class = "row">
                         <div class = "col-md text-center">
-                            <form method="POST">
-                                <select class="dropdown" name="selectedTable" onchange="this.form.submit()">
-                                    <option value="">-Select Item-</option>
-                                    <?php
-                                        ini_set("display_errors", 0);
-                                        dropdownOptions("list_of_uniform_items","item_name","item_table_name");
-                                    ?>
+                            <form action="" method = "post">
+                                <select name = "uniform" style = "width: 287px; height: 43px;" class = "dropdown" onchange="this.form.submit()">
+                                    <option value="">- Uniform -</option>
+                                    <?php dropdownDistinct("uniforms"); ?>
                                 </select>
                             </form>
 
-                            <?php echo "<h2 style = \"display: block;\">" . $_POST['selectedTable'] . "</h2>"; ?>
+                            <?php
+                                if(isset($_POST["uniform"])) {
+                                    $_SESSION["uniform"] = $_POST["uniform"];
+                                }
+                            ?>
+
+                            <form action="" method="post">
+                                <select name="item" class = "dropdown" style = "width: 287px; height: 43px;" onchange="this.form.submit()">
+                                    <option value="">- Item -</option>
+                                    <?php dropdownOptions($_SESSION["uniform"], "uniform", "uniform_name", "uniform"); ?>
+                                </select>
+                            </form>
+
+                            <?php echo "<h2 style = \"display: block;\">" . $_POST['item'] . "</h2>"; ?>
                         </div>
                     </div>
                     <div class = "row">
@@ -106,7 +130,7 @@
                             <!-- Prints table -->
                             <?php
                                 ini_set("display_errors", 0);
-                                printTable($_POST['selectedTable']);
+                                printTable($_POST['item']);
                             ?>
                         </div>
                     </div>
@@ -133,7 +157,7 @@
                         
                         <select name = "item" style = "width: 287px; height: 43px" class = "dropdown">
                             <option value="">- Select Item -</option>
-                            <?php dropdownOptions("list_of_uniform_items","item_name","item_table_name"); ?>
+                            <?php dropdownOptions("list_of_uniform_items","item_name","item_table_name", "item_name"); ?>
                         </select>
 
                         <input type="text" class = "input" name = "size" placeholder = "Size" style = "width: 287px; height: 43px;">

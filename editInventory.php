@@ -8,24 +8,69 @@
         <div class = "row">
             <div class = "col-md text-center">
                 <!-- Add to Current Edit -->
-                <h1>Add to Current Edit</h1>
+                <h1>Add to Edit</h1>
                 <hr>
+                <?php
+                    if(isset($_GET['error'])) {                            
+                        /* Empty Fields */
+                        if($_GET['error'] == "emptyfields") {
+                            echo "<p class = \"text error\"><i class=\"fas fa-times\" style = \"float: left; margin-left: 4px;\"></i>Please fill out all fields</p>";
+                        }
 
-                <form action="includes/addToEdit.inc.php" method="POST">
-                    <select name = "editType" style="width: 230px; height: 43px" class="dropdown">
-                        <option value = "">- Type -</option>
-                        <option value = "add">Add</option>
-                        <option value = "remove">Remove</option>
+                        /* Don't have item */
+                        if($_GET['error'] == "noitem") {
+                            echo "<p class = \"text error\"><i class=\"fas fa-times\" style = \"float: left; margin-left: 4px;\"></i>You cannot return items that you don't have</p>";
+                        }
+
+                        /* sql error */
+                        if($_GET['error'] == "sqlerror") {
+                            echo "<p class = \"text error\"><i class=\"fas fa-times\" style = \"float: left; margin-left: 4px;\"></i>There seems to be a problem, try again later and/or contact uo@330afrotccwg.org about the issue</p>";
+                        }
+                    }
+
+                    if(isset($_GET['sql'])) {                            
+                        /* Success */
+                        if($_GET['sql'] == "success") {
+                            echo "<p class = \"text success\"><i class=\"fas fa-check\" style = \"float: left; margin-left: 4px; padding-right: 2px;\"></i>Your edit has been processed</p>";
+                        }
+                    }
+                ?>
+                <form action="" method = "post">
+                    <select name="editType" class = "dropdown" style = "width: 230px; height: 43px;">
+                        <option value="">- Add/Remove -</option>
+                        <option value="add">Add</option>
+                        <option value="remove">Remove</option>
                     </select>
-                    
-                    <select name = "item" class="dropdown" style="width: 230px; height: 43px">
-                        <option value="">- Select Item -</option>
-                        <?php dropdownOptions("list_of_uniform_items","item_name","item_table_name"); ?>
-                    </select>
-                    
                     <br>
+                    <select name = "uniform" style = "width: 230px; height: 43px;" class = "dropdown" onchange="this.form.submit()">
+                        <option value="">- Uniform -</option>
+                        <?php dropdownDistinct("uniforms"); ?>
+                    </select>
+                </form>
 
+                <?php
+                    if(isset($_POST["uniform"])) {
+                        $_SESSION["editType"] = $_POST["editType"];
+                        $_SESSION["uniform"] = $_POST["uniform"];
+                    }
+                ?>
+
+                <form action="" method="post">
+                    <select name="item" class = "dropdown" style = "width: 230px; height: 43px;" onchange="this.form.submit()">
+                        <option value="">- Item -</option>
+                        <?php dropdownOptions($_SESSION["uniform"],"uniform","uniform_name", "uniform"); ?>
+                    </select>
+                </form>
+                
+                <?php
+                    if(isset($_POST["item"])) {
+                        $_SESSION["item"] = $_POST["item"];
+                    }
+                ?>
+
+                <form action="includes/addToEdit.inc.php" method = "post">
                     <input type="text" class="input" style="width: 230px; height: 43px" name="size" placeholder="Size">
+                    <br>
                     <input type="text" class="input" style="width: 230px; height: 43px" name="quantity" placeholder="Quantity">
                     
                     <br>

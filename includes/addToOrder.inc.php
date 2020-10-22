@@ -4,7 +4,7 @@
     session_start();
 
     $orderType = $_SESSION["orderType"];
-    $item      = $_SESSION["uniformItem"];
+    $item      = $_SESSION["item"];
     $size      = mysqli_real_escape_string($conn, $_POST["size"     ]);
     $quantity  = mysqli_real_escape_string($conn, $_POST["quantity" ]);
 

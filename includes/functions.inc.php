@@ -21,7 +21,7 @@
         //Print Column names with table data
         if ($resultCheck_columns > 0 && $resultCheck_data > 0) {
             $columns = array();
-            echo "<table class = \"d-flex justify-content-center\" style = \"height: 150px\">";
+            echo "<table class = \"d-flex justify-content-center\">";
             echo "<tr>";
             
             while($column_names = mysqli_fetch_assoc($result_columns)) {
@@ -46,25 +46,39 @@
         $conn->close();
     }
 
-    //Dropdown from table column
-    function dropdownOptions($table, $item, $table_name) {
+    //Dropdown from table column (Table to select from, post value, display value)
+    function dropdownOptions($table, $item, $table_name, $order) {
         include 'dbh.inc.php';
 
-        $sql = "SELECT * FROM $table";
+        if($order == "none") {
+            $sql = "SELECT DISTINCT * FROM $table";
+        }  else {
+            $sql = "SELECT * FROM $table ORDER BY $order";
+        }
+
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+    
+        if ($resultCheck > 0) {
+            while($row = mysqli_fetch_assoc($result)) {
+                echo "<option value=\"" . $row["$table_name"] . "\">" . $row["$item"] . "</option>";
+            }
+        }
+    }
+
+    // Distinct dropdown
+    function dropdownDistinct($table) {
+        include 'dbh.inc.php';
+
+        $sql = "SELECT * FROM $table ORDER BY uniform";
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
 
-        if($table_name == "none") {
-            if ($resultCheck > 0) {
-                while($row = mysqli_fetch_assoc($result)) {
-                    echo "<option value=\"" . $row["$table_name"] . "\">" . $row["$item"] . "</option>";
-                }
-            }
-        } else {
-            if ($resultCheck > 0) {
-                while($row = mysqli_fetch_assoc($result)) {
-                    echo "<option value=\"" . $row["$table_name"] . "\">" . $row["$item"] . "</option>";
-                }
+        
+
+        if ($resultCheck > 0) {
+            while($row = mysqli_fetch_assoc($result)) {
+                echo "<option value=\"" . $row["uniform_table"] . "\">" . $row["uniform"] . "</option>";
             }
         }
     }

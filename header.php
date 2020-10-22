@@ -20,8 +20,10 @@
 
         <style>
             table {
+                
+                max-height: 350px;
                 display: block;
-                overflow-x: auto;
+                overflow-y: auto;
                 white-space: nowrap;
                 background-color: white;
                 border-collapse: collapse;
@@ -31,7 +33,8 @@
                 font-size: 25px;
                 text-align: center;
                 margin: auto;
-                height: 100%;
+                
+                
             }
 
             td {
