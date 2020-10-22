@@ -18,7 +18,7 @@
         }
 
         /* Create own table */
-        $sql = "CREATE TABLE $item_name (size varchar(5) not null, in_stock int(5) not null, issued int(5) not null, total int(5) not null);";
+        $sql = "CREATE TABLE $item_name (size varchar(5) not null UNIQUE, in_stock int(5) not null, issued int(5) not null, total int(5) not null);";
         mysqli_query($conn, $sql);
     } else if(isset($_POST["newUniform"])) {
         $Table_Display_Name = mysqli_real_escape_string($conn, $_POST["table_display_name"]);
@@ -36,7 +36,7 @@
         }
 
         /* Create own table */
-        $sql = "CREATE TABLE $Table_Name (item_name varchar(30) not null, item_table varchar(30) not null);";
+        $sql = "CREATE TABLE $Table_Name (item_name varchar(30) not null UNIQUE, item_table varchar(30) not null UNIQUE);";
         mysqli_query($conn, $sql);
     } else {
         header("Location: ../index.php");
