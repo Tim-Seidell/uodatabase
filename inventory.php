@@ -18,14 +18,14 @@
                 ?>
 
                 <form action="" method = "post">
-                    <select name = "uniform"class = "dropdown" onchange="this.form.submit()">
+                    <select name = "uniform"class = "dropdown" style = "width: 230px; height: 43px" onchange="this.form.submit()">
                         <?php dynamicOption("uniform","- Uniform -") ?>
                         <?php dropdownDistinct("uniforms"); ?>
                     </select>
                 </form>
 
                 <form action="" method="post">
-                    <select name="item" class = "dropdown" onchange="this.form.submit()">
+                    <select name="item" class = "dropdown" style = "width: 230px; height: 43px" onchange="this.form.submit()">
                         <?php dynamicOption("item","- Item -") ?>
                         <?php dropdownOptions($_SESSION["uniform"], "item_name", "item_table", "item_name"); ?>
                     </select>

@@ -8,11 +8,11 @@
                 <hr>
                 
                 <form action="includes/removeCadet.inc.php" method="POST" class="center">
-                    <input type="number" name="id" placeholder="Swipe" class="input center" autofocus>
+                    <input type="number" name="id" placeholder="Swipe" class="input center" style = "width: 230px; height: 43px" autofocus>
                     <br>
 
-                    <a href="cadets.php"><button class="autoButton button_blue">Back</button></a>
-                    <button type="submit" name="submit" class="autoButton button_blue">Submit</button>
+                    <a href="cadets.php"><button class="autoButton button_blue" style = "width: 230px;">Back</button></a>
+                    <button type="submit" name="submit" class="autoButton button_blue" style = "width: 230px;">Submit</button>
                 </form>
             </div>
         </div>

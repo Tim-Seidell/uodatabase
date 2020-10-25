@@ -8,7 +8,7 @@
                     <li><h1 class="text">Report</h1></li>
                     <hr>
                     
-                    <li><a href="index.php" target="_self"><button class="button button_blue">Home</button></a></li>
+                    <li><a href="index.php" target="_self"><button class="button button_blue" style = "width: 230px;">Home</button></a></li>
                 </ul>
             </div>
         </div>

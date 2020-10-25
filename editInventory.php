@@ -46,14 +46,14 @@
                     }
                 ?>
                 <form action="" method = "post">
-                    <select name="editType" class = "dropdown">
+                    <select name="editType" class = "dropdown" style = "width: 230px; height: 43px">
                         <?php dynamicOption("editType", "- Add/Remove -"); ?>
                         <!-- <option value="">- Add/Remove -</option> -->
                         <option value="add">Add</option>
                         <option value="remove">Remove</option>
                     </select>
                     <br>
-                    <select name = "uniform" class = "dropdown" onchange="this.form.submit()">
+                    <select name = "uniform" class = "dropdown" style = "width: 230px; height: 43px" onchange="this.form.submit()">
                         <?php dynamicOption("uniform", "- Uniform -"); ?>
                         <!-- <option value="">- Uniform -</option> -->
                         <?php dropdownDistinct("uniforms"); ?>
@@ -61,21 +61,20 @@
                 </form>
 
                 <form action="" method="post">
-                    <select name="item" class = "dropdown" onchange="this.form.submit()">
+                    <select name="item" class = "dropdown" style = "width: 230px; height: 43px" onchange="this.form.submit()">
                         <?php dynamicOption("item", "- Item -"); ?>
-                        <option value="">- Item -</option>
                         <?php dropdownOptions($_SESSION["uniform"],"item_name","item_table", "item_name"); ?>
                     </select>
                 </form>
 
                 <form action="includes/addToEdit.inc.php" method = "post">
-                    <input type="text" class="input" name="size" placeholder="Size">
+                    <input type="text" class="input" name="size" placeholder="Size" style = "width: 230px; height: 43px">
                     <br>
-                    <input type="text" class="input" name="quantity" placeholder="Quantity">
+                    <input type="text" class="input" name="quantity" placeholder="Quantity" style = "width: 230px; height: 43px">
                     
                     <br>
                     
-                    <input type="submit" class="button button_blue" value = "Add to Edit">
+                    <input type="submit" class="button button_blue" value = "Add to Edit" style = "width: 230px;">
                 </form>
 
                 <!-- Submit Edit -->
@@ -84,7 +83,7 @@
 
                 <form action = "includes/editInventory.inc.php" method = "post">
                     <div class = "container"><div class = "center_btn">
-                        <input type = "submit" class = "button button_blue" value = "Submit Edit">
+                        <input type = "submit" class = "button button_blue" value = "Submit Edit" style = "width: 230px; height: 43px">
                     </div></div>
                 </form>
             </div>
@@ -97,7 +96,7 @@
                 <br>
 
                 <form action="includes/cancelEdit.inc.php">
-                    <input class = "button button_blue" type="submit" value = "Cancel Edit">
+                    <input class = "button button_blue" type="submit" value = "Cancel Edit" style = "width: 230px; height: 43px">
                 </form>
             </div>
         </div>

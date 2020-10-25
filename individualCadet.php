@@ -8,7 +8,7 @@
                 <hr>
                 
                 <form method="POST">
-                    <select class="dropdown" name="selectedTable" onchange="this.form.submit()">
+                    <select class="dropdown" name="selectedTable" style = "width: 230px; height: 43px" onchange="this.form.submit()">
                         <option value="">- Select Cadet -</option>
                         <?php dropdownOptions("cadets","Lastname","cadet_table_name", "Lastname"); ?>
                     </select>
