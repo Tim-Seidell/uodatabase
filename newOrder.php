@@ -37,14 +37,14 @@
                 ?>
                 <form action="" method = "post">
                     <select name="orderType" class = "dropdown" style = "width: 287px; height: 43px;">
-                        <?php dynamicOption("orderType") ?>
+                        <?php dynamicOption("orderType", "- Type -") ?>
                         <!-- <option value="">- Type -</option> -->
                         <option value="issue">Issue</option>
                         <option value="return">Return</option>
                     </select>
                     <br>
                     <select name = "uniform" style = "width: 287px; height: 43px;" class = "dropdown" onchange="this.form.submit()">
-                        <?php dynamicOption("uniform") ?>
+                        <?php dynamicOption("uniform", , "- Uniform -") ?>
                         <!-- <option value="">- Uniform -</option> -->
                         <?php dropdownDistinct("uniforms"); ?>
                     </select>
@@ -59,7 +59,7 @@
 
                 <form action="" method="post">
                     <select name="item" class = "dropdown" style = "width: 287px; height: 43px;" onchange="this.form.submit()">
-                        <?php dynamicOption("item") ?>
+                        <?php dynamicOption("item", "- Item -") ?>
                         <!-- <option value="">- Item -</option> -->
                         <?php dropdownOptions($_SESSION["uniform"], "item_name", "item_table", "item_name"); ?>
                     </select>
@@ -73,7 +73,7 @@
 
                 <form action="includes/addToOrder.inc.php" method = "post">
                     <select name = "size" style = "width: 287px; height: 43px;" class = "dropdown">
-                        <?php dynamicOption("size") ?>
+                        <?php dynamicOption("size", "- Size -") ?>
                         <!-- <option value="">- Size -</option> -->
                         <?php dropdownOptions($_SESSION["item"], "size", "size", "size"); ?>
                     </select>
