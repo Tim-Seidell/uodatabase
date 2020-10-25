@@ -9,7 +9,7 @@
         <div class = "row">
             
             <!-- Edit Inventory -->
-            <div class = "col-md text-center" <?php setting("editing") ?>>
+            <div class = "col-md text-center" style = "height: 600px" <?php setting("editing") ?>>
                 <h1>Edit my Inventory</h1>
                 <hr>
                 <?php
@@ -82,7 +82,7 @@
                 </form>
             </div>
 
-            <div class = "col-md text-center">
+            <div class = "col-md text-center" style = "height: 600px">
                 <h1>My Inventory</h1>
                 <hr>
                 <div class = "container">
@@ -95,7 +95,7 @@
                 </div>
             </div>
 
-            <div class = "col-md text-center">
+            <div class = "col-md text-center" style = "height: 600px">
                 <h1>UO Inventory</h1>
                 <hr>
 
@@ -138,7 +138,7 @@
         </div>
 
         <div class = "row" <?php setting("ordering") ?>>
-            <div class = "col-md text-center">
+            <div class = "col-md text-center" style = "height: 600px">
                 <!-- Place an order -->
                 <h1>Place an order</h1>
                 <hr>
@@ -160,7 +160,7 @@
                     <input type="submit" class = "button button_blue" name = "" value = "Submit">
                 </form>
             </div>
-            <div class = "col-md text-center">
+            <div class = "col-md text-center" style = "height: 600px">
                 <h1>Current order</h1>
                 <hr>
                 
