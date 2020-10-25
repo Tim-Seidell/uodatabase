@@ -6,7 +6,7 @@
         <hr>
 
         
-        <div class = "row">
+        <div class = "row" style = "height: 1500px">
             
             <!-- Edit Inventory -->
             <div class = "col-md text-center" <?php setting("editing") ?>>
