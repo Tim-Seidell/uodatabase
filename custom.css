@@ -289,6 +289,7 @@ tbody {
     max-height: 350px;
     display: block;
     overflow-y: auto;
+    overflow-x: auto;
     white-space: nowrap;
     background-color: white;
     border-collapse: collapse;
