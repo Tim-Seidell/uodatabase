@@ -142,28 +142,28 @@
         <div style="padding-top: 100px;"></div>
         </div>
 
-        <div class = "row">
+        <div class = "row" <?php setting("ordering") ?>>
             <div class = "col-md text-center">
                 <!-- Place an order -->
                 <h1>Place an order</h1>
-                    <hr>
+                <hr>
 
-                    <form action="includes/placeOrder.inc.php" method = "POST" style = "width: 100%; margin: auto;">
-                        <select name = "orderType" style = "width: 287px; height: 43px" class="dropdown">
-                            <option value="">- Type -</option>
-                            <option value="order">Order</option>
-                            <option value="return">Return</option>
-                        </select><br>
-                        
-                        <select name = "item" style = "width: 287px; height: 43px" class = "dropdown">
-                            <option value="">- Select Item -</option>
-                            <?php dropdownOptions("list_of_uniform_items","item_name","item_table_name", "item_name"); ?>
-                        </select>
+                <form action="includes/placeOrder.inc.php" method = "POST" style = "width: 100%; margin: auto;">
+                    <select name = "orderType" style = "width: 287px; height: 43px" class="dropdown">
+                        <option value="">- Type -</option>
+                        <option value="order">Order</option>
+                        <option value="return">Return</option>
+                    </select><br>
+                    
+                    <select name = "item" style = "width: 287px; height: 43px" class = "dropdown">
+                        <option value="">- Select Item -</option>
+                        <?php dropdownOptions("list_of_uniform_items","item_name","item_table_name", "item_name"); ?>
+                    </select>
 
-                        <input type="text" class = "input" name = "size" placeholder = "Size" style = "width: 287px; height: 43px;">
-                        <input type="text" class = "input" name = "quantity" placeholder = "Quantity" style = "width: 287px; height: 43px;">     
-                        <input type="submit" class = "button button_blue" name = "" value = "Submit" style = "width: 287px;">
-                    </form>
+                    <input type="text" class = "input" name = "size" placeholder = "Size" style = "width: 287px; height: 43px;">
+                    <input type="text" class = "input" name = "quantity" placeholder = "Quantity" style = "width: 287px; height: 43px;">     
+                    <input type="submit" class = "button button_blue" name = "" value = "Submit" style = "width: 287px;">
+                </form>
             </div>
             <div class = "col-md text-center">
                 <h1>Current order</h1>

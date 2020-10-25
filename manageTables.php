@@ -27,7 +27,6 @@
                 <hr>
                 <form action="includes/addTable.inc.php" method="POST">
                     <input type="text" class="input" name="table_display_name" placeholder="Uniform Name" style="width: 230px; height: 43px;">
-                    <input type="text" class="input" name="table_name" placeholder="uniform_name" style="width: 230px; height: 43px;">
                     <button type="submit" class="button button_blue" style="width: 230px;" name = "newUniform" value = "newUniform">Create New Uniform</button>
                 </form>
             </div>
