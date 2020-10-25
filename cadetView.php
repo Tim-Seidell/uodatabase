@@ -78,7 +78,7 @@
                     <br>
                     <input type="number" placeholder = "Quantity" name = "quantity" class = "input" style = "width: 230px; height: 43px">
                     <br>
-                    <input type="submit" class = "button button_blue" value = "submit" style = "width: 230px;">
+                    <input type="submit" class = "button button_blue" value = "Submit" style = "width: 230px;">
                 </form>
             </div>
 
