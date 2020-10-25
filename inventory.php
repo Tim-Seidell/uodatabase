@@ -20,7 +20,6 @@
                 <form action="" method = "post">
                     <select name = "uniform" style = "width: 287px; height: 43px;" class = "dropdown" onchange="this.form.submit()">
                         <?php dynamicOption("uniform","- Uniform -") ?>
-                        <!-- <option value="">- Uniform -</option> -->
                         <?php dropdownDistinct("uniforms"); ?>
                     </select>
                 </form>
@@ -28,7 +27,6 @@
                 <form action="" method="post">
                     <select name="item" class = "dropdown" style = "width: 287px; height: 43px;" onchange="this.form.submit()">
                         <?php dynamicOption("item","- Item -") ?>
-                        <!-- <option value="">- Item -</option> -->
                         <?php dropdownOptions($_SESSION["uniform"], "item_name", "item_table", "item_name"); ?>
                     </select>
                 </form>

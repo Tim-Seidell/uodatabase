@@ -158,16 +158,16 @@
 
             if(isset($_SESSION[$name])) {
                 echo '<option value="">'. $display .'</option>';
-            } else {
-                echo '<option value="">'. $placeholder .'</option>';
             }
+            
+            echo '<option value="">'. $placeholder .'</option>';
 
         } else {
             if(isset($_SESSION[$name])) {
                 echo '<option value="">'. ucfirst($_SESSION[$name]) .'</option>';
-            } else {
-                echo '<option value="">'. $placeholder .'</option>';
             }
+            
+            echo '<option value="">'. $placeholder .'</option>';
         }
     }
 ?>
