@@ -73,7 +73,8 @@
 
                 <form action="includes/addToOrder.inc.php" method = "post">
                     <select name = "size" style = "width: 287px; height: 43px;" class = "dropdown">
-                        <option value="">- Size -</option>
+                        <?php dynamicOption("size") ?>
+                        <!-- <option value="">- Size -</option> -->
                         <?php dropdownOptions($_SESSION["item"], "size", "size", "size"); ?>
                     </select>
                     <br>
@@ -81,6 +82,12 @@
                     <br>
                     <input type="submit" class = "button button_blue" value = "submit" style = "width: 287px;">
                 </form>
+
+                <?php
+                    if(isset($_POST["size"])) {
+                        $_SESSION["size"] = $_POST["size"];
+                    }
+                ?>
 
                 <h1>Submit Order</h1>
                 <hr>
