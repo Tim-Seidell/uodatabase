@@ -33,7 +33,7 @@
                     if(isset($_GET['sql'])) {                            
                         /* Success */
                         if($_GET['sql'] == "success") {
-                            echo "<p class = \"text success\"><i class=\"fas fa-check\" style = \"float: left; margin-left: 4px; padding-right: 2px;\"></i>Your edit has been processed</p>";
+                            echo "<p class = \"text success\"><i class=\"fas fa-check\" style = \"float: left; margin-left: 4px; padding-right: 2px;\"></i>Edit successful!</p>";
                         }
                     }
 
