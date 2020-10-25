@@ -60,7 +60,7 @@
                     }
                     
                     /* Technician */
-                    else if($_SESSION['userUid'] == "uo_technician"){
+                    else if($_SESSION['userUid'] == "technician"){
                         echo '
                         <div class = "container d-flex justify-content-center"">
                             <div class = "div_card">
