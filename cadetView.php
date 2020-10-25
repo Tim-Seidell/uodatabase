@@ -52,7 +52,7 @@
                 ?>
                 <form action="" method = "post">
                     <select name="orderType" class = "dropdown" style = "width: 287px; height: 43px;">
-                        <option value="">- Type -</option>
+                        <?php dynamicOption("orderType", "- Type -");?>  
                         <option value="add">Add</option>
                         <option value="return">Return</option>
                     </select>
