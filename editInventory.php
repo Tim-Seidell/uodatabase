@@ -6,7 +6,7 @@
         <hr>
 
         <div class = "row">
-            <div class = "col-md text-center">
+            <div class = "col-md text-center" style = "height: 600px">
                 <!-- Add to Current Edit -->
                 <h1>Add to Edit</h1>
                 <hr>
@@ -89,7 +89,7 @@
                 </form>
             </div>
 
-            <div class = "col-md text-center">
+            <div class = "col-md text-center" style = "height: 600px">
                 <h1>Current Edit</h1>
                 <hr>       
                 <?php printTable("current_edit"); ?>

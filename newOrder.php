@@ -6,7 +6,7 @@
         <hr>
 
         <div class="row">
-            <div class = "col text-center">
+            <div class = "col text-center" style = "height: 600px">
                 <h1>Add to Order</h1>
                 <hr>
 
@@ -101,7 +101,7 @@
                 </form>
             </div>
 
-            <div class = "col-md text-center">
+            <div class = "col-md text-center" style = "height: 600px">
                 <!-- Current Order -->
                 <h1>Current Order</h1>
                 <hr>
