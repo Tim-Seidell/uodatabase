@@ -36,6 +36,19 @@
                             echo "<p class = \"text success\"><i class=\"fas fa-check\" style = \"float: left; margin-left: 4px; padding-right: 2px;\"></i>Your edit has been processed</p>";
                         }
                     }
+
+                    if(isset($_POST["uniform"])) {
+                        $_SESSION["orderType"] = $_POST["orderType"];
+                        $_SESSION["uniform"] = $_POST["uniform"];
+                    }
+
+                    if(isset($_POST["item"])) {
+                        $_SESSION["item"] = $_POST["item"];
+                    }
+
+                    if(isset($_POST["uniform"])) {
+                        $_SESSION["uniform"] = $_POST["uniform"];
+                    }
                 ?>
                 <form action="" method = "post">
                     <select name="orderType" class = "dropdown" style = "width: 287px; height: 43px;">
@@ -45,30 +58,17 @@
                     </select>
                     <br>
                     <select name = "uniform" style = "width: 287px; height: 43px;" class = "dropdown" onchange="this.form.submit()">
-                        <option value="">- Uniform -</option>
+                        <?php dynamicOption("uniform", "- Uniform -");?>                        
                         <?php dropdownDistinct("uniforms"); ?>
                     </select>
                 </form>
 
-                <?php
-                    if(isset($_POST["uniform"])) {
-                        $_SESSION["orderType"] = $_POST["orderType"];
-                        $_SESSION["uniform"] = $_POST["uniform"];
-                    }
-                ?>
-
                 <form action="" method="post">
                     <select name="item" class = "dropdown" style = "width: 287px; height: 43px;" onchange="this.form.submit()">
-                        <option value="">- Item -</option>
+                        <?php dynamicOption("item", "- Item -");?>                        
                         <?php dropdownOptions($_SESSION["uniform"],"uniform","uniform_name", "uniform"); ?>
                     </select>
                 </form>
-                
-                <?php
-                    if(isset($_POST["item"])) {
-                        $_SESSION["item"] = $_POST["item"];
-                    }
-                ?>
 
                 <form action="includes/editPersonalInventory.inc.php" method = "post">
                     <select name = "size" style = "width: 287px; height: 43px;" class = "dropdown">
@@ -104,20 +104,15 @@
                         <div class = "col-md text-center">
                             <form action="" method = "post">
                                 <select name = "uniform" style = "width: 287px; height: 43px;" class = "dropdown" onchange="this.form.submit()">
-                                    <option value="">- Uniform -</option>
+                                    <?php dynamicOption("uniform", "- Uniform -");?>
                                     <?php dropdownDistinct("uniforms"); ?>
                                 </select>
                             </form>
 
-                            <?php
-                                if(isset($_POST["uniform"])) {
-                                    $_SESSION["uniform"] = $_POST["uniform"];
-                                }
-                            ?>
-
+                            
                             <form action="" method="post">
                                 <select name="item" class = "dropdown" style = "width: 287px; height: 43px;" onchange="this.form.submit()">
-                                    <option value="">- Item -</option>
+                                    <?php dynamicOption("item", "- Item -");?>
                                     <?php dropdownOptions($_SESSION["uniform"], "item_name", "item_table", "item_name"); ?>
                                 </select>
                             </form>
