@@ -117,4 +117,22 @@
             echo "test";
         }
     }
+
+    function settingButton($setting_name) {
+        $sql = "SELECT * FROM settings WHERE setting_name = '$setting_name'";
+
+        if(mysqli_fetch_assoc(mysqli_query($conn, $sql))['setting'] == 1) {
+            echo '
+                <form action="includes/changeSetting.inc.php" method = "post">
+                    <button class = "button button_blue" style = "background-color: green" type = "submit" name = "setting_name" value = "' . strtolower($setting_name) . '">'. $setting_name . ' on</button>
+                </form>    
+            ';
+        } else {
+            echo '
+                <form action="includes/changeSetting.inc.php" method = "post">
+                    <button class = "button button_blue" style = "background-color: red" type = "submit" name = "setting_name" value = "' . strtolower($setting_name) . '">'. $setting_name . ' off</button>
+                </form>    
+            ';
+        }
+    }
 ?>
