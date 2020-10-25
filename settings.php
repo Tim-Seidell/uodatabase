@@ -5,7 +5,6 @@
         <div class = "row">
             <div class = "col-md text-center">
                 <?php
-                require 'includes/dbh.inc.php';
                 require 'includes/functions.inc.php';
                     $sql = "SELECT * FROM settings WHERE setting_name = 'editing'";
 

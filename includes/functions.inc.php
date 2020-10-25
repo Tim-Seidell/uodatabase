@@ -119,6 +119,7 @@
     }
 
     function settingButton($setting_name) {
+        require 'dbh.inc.php';
         $sql = "SELECT * FROM settings WHERE setting_name = '$setting_name'";
 
         if(mysqli_fetch_assoc(mysqli_query($conn, $sql))['setting'] == 1) {
