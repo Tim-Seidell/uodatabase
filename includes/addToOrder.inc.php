@@ -12,10 +12,10 @@
     mysqli_query($conn, $sql);
 
     /* unset Session Variables */
-    // unset($_SESSION["orderType"]);
-    // unset($_SESSION["uniform"]);
-    // unset($_SESSION["item"]);
-    // unset($_SESSION["size"]);
+    unset($_SESSION["orderType"]);
+    unset($_SESSION["uniform"]);
+    unset($_SESSION["item"]);
+    unset($_SESSION["size"]);
 
     /* Redirect */
     header("Location: ../newOrder.php");
