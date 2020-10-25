@@ -143,7 +143,7 @@
                 $sql = "SELECT * FROM uniforms WHERE uniform_table = '$uniform_table';";
                 $display = mysqli_fetch_assoc(mysqli_query($conn, $sql))["uniform"];
             } else if($name = "item") {
-                $uniform_table = $_SESSION[$name];
+                $uniform_table = $_SESSION["uniform"];
                 $sql = "SELECT * FROM uniforms WHERE uniform_table = '$uniform_table';";
                 $table = mysqli_fetch_assoc(mysqli_query($conn, $sql))["uniform"];
                 $item_table = $_SESSION["item"];
