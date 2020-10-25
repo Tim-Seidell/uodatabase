@@ -6,7 +6,8 @@
             <div class = "col-md text-center">
                 <?php
                     
-                    settingButton("Test");
+                    settingButton("Editing");
+                    settingButton("Ordering");
                     // $sql = "SELECT * FROM settings WHERE setting_name = 'editing'";
 
                     // if(mysqli_fetch_assoc(mysqli_query($conn, $sql))['setting'] == 1) {
