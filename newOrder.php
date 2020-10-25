@@ -85,10 +85,13 @@
                 <h1>Submit Order</h1>
                 <hr>
                 <form action = "includes/submitOrder.inc.php" method = "POST">
-                    <input type="text" name="id" style="width: 230px; height: 43px;" class="input" placeholder="Swipe">
-                    <br>
-                    <h3>Or</h3>
-                    <br>
+                    <div hidden>
+                        <input type="text" name="id" style="width: 230px; height: 43px;" class="input" placeholder="Swipe">
+                        <br>
+                        <h3>Or</h3>
+                        <br>
+                    </div>
+
                     <select name="name" style="width: 230px" class="dropdown">
                         <option value="">- Name -</option>
                         <?php dropdownOptions("cadets", "Lastname", "cadet_table_name", "Lastname"); ?>
