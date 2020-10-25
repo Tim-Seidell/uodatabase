@@ -15,6 +15,8 @@ html body {
     border-radius: 8px;
     width: 200px;
     outline: none;
+    width: 230px;
+    height: 43px;
 }
 
 .autoButton {
@@ -289,8 +291,12 @@ tbody {
     display: contents;
  }
 
- table {
-                
+ select {
+    width: 230px;
+    height: 43px;
+ }
+
+ table {       
     max-height: 350px;
     display: block;
     overflow-y: auto;
@@ -304,8 +310,6 @@ tbody {
     font-size: 25px;
     text-align: center;
     margin: auto;
-    
-    
 }
 
 td {
