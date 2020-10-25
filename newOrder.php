@@ -39,12 +39,12 @@
                     <select name="orderType" class = "dropdown" style = "width: 287px; height: 43px;">
                         <?php 
                             if(isset($_SESSION["orderType"])) {
-                                echo '<option value="">- Type -</option>';
+                                echo '<option value="">'. $_SESSION["orderType"] .'</option>';
                             } else {
-                                echo '<option value="">- Custom -</option>';
+                                echo '<option value="">- Type -</option>';
                             }
                         ?>
-                        <option value="">- Type -</option>
+                        <!-- <option value="">- Type -</option> -->
                         <option value="issue">Issue</option>
                         <option value="return">Return</option>
                     </select>
