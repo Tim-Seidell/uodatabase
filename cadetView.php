@@ -38,6 +38,8 @@
                     }
 
                     if(isset($_POST["uniform"])) {
+                        unset($SESSION["item"]);
+                        unset($SESSION["uniform"]);
                         $_SESSION["orderType"] = $_POST["orderType"];
                         $_SESSION["uniform"] = $_POST["uniform"];
                     }
