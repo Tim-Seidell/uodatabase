@@ -136,10 +136,31 @@
     }
 
     function dynamicOption($name, $placeholder) {
-        if(isset($_SESSION[$name])) {
-            echo '<option value="">'. $_SESSION[$name] .'</option>';
+        if($name != "orderType" && $name != "editType") {
+            require 'dbh.inc.php';
+            if($name == "uniform") {
+                $uniform_table = $_SESSION[$name];
+                $sql = "SELECT * FROM uniforms WHERE uniform_table = '$uniform_table';";
+                $display = mysqli_fetch_assoc(mysqli_query($conn, $sql))["uniform"];
+            } else if($name = "item") [
+                $uniform_table = $_SESSION[$name];
+                $item_table = $_SESSION["item"];
+                $sql = "SELECT * FROM $uniform_table WHERE item_table = '$item_table';";
+                $display = mysqli_fetch_assoc(mysqli_query($conn, $sql))["item_name"];
+            ]
+
+            if(isset($_SESSION[$name])) {
+                echo '<option value="">'. $display .'</option>';
+            } else {
+                echo '<option value="">'. $placeholder .'</option>';
+            }
+
         } else {
-            echo '<option value="">'. $placeholder .'</option>';
+            if(isset($_SESSION[$name])) {
+                echo '<option value="">'. $_SESSION[$name] .'</option>';
+            } else {
+                echo '<option value="">'. $placeholder .'</option>';
+            }
         }
     }
 ?>
