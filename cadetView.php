@@ -149,14 +149,16 @@
                         <option value="order">Order</option>
                         <option value="return">Return</option>
                     </select><br>
-                    
+                    <br>
                     <select name = "item" class = "dropdown">
                         <option value="">- Select Item -</option>
                         <?php dropdownOptions("list_of_uniform_items","item_name","item_table_name", "item_name"); ?>
                     </select>
-
+                    <br>
                     <input type="text" class = "input" name = "size" placeholder = "Size">
+                    <br>
                     <input type="text" class = "input" name = "quantity" placeholder = "Quantity">     
+                    <br>
                     <input type="submit" class = "button button_blue" name = "" value = "Submit">
                 </form>
             </div>
