@@ -162,6 +162,7 @@ input[type=number] {
     height: 100%;
     margin: auto;
     display: block;
+    overflow: auto;
 }
 
 .dropdown {
