@@ -170,4 +170,32 @@
             echo '<option value="">'. $placeholder .'</option>';
         }
     }
+
+    function authenticate($level) {
+        if(isset($_SESSION['userId'])) {
+            $user = $_SESSION['userUid'];
+            
+            if($level == "admin") {
+                if($user != "administrator") {
+                    header("Location: ../index.php");
+                    exit();
+                }
+            } else if ($level == "UO") {
+                if($user != "administrator" && $user != "uniform_officer") {
+                    header("Location: ../index.php");
+                    exit();
+                }
+            } else if($level == "tech") {
+                if($user != "administrator" && $user != "uniform_officer" && $user != "technician" && $user != "cadre") {
+                    header("Location: ../index.php");
+                    exit();
+                }
+            }
+        } else {
+            header("Location: ../index.php");
+            exit();
+        }
+
+
+    }
 ?>
