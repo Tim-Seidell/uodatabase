@@ -142,12 +142,17 @@
                 $uniform_table = $_SESSION[$name];
                 $sql = "SELECT * FROM uniforms WHERE uniform_table = '$uniform_table';";
                 $display = mysqli_fetch_assoc(mysqli_query($conn, $sql))["uniform"];
-            } else if($name = "item") [
+            } else if($name = "item") {
                 $uniform_table = $_SESSION[$name];
                 $item_table = $_SESSION["item"];
+                echo $name;
+                echo $uniform_table;
+                echo $item_table;
                 $sql = "SELECT * FROM $uniform_table WHERE item_table = '$item_table';";
                 $display = mysqli_fetch_assoc(mysqli_query($conn, $sql))["item_name"];
-            ]
+                echo $sql;
+                echo $display;
+            }
 
             if(isset($_SESSION[$name])) {
                 echo '<option value="">'. $display .'</option>';
