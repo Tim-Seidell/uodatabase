@@ -15,7 +15,7 @@
                     /* Administrator */
                     else if($_SESSION['userUid'] == "administrator"){
                         echo '
-                        <div class = "container d-flex justify-content-center"">
+                        <div class = "container-fluid d-flex justify-content-center"">
                             <div class = "div_card">
             
                                 <h1 class="text text_heading center">Uniform Office Database</h1>
@@ -40,7 +40,7 @@
                     /* Uniform Officer */
                     else if($_SESSION['userUid'] == "uniform_officer"){
                         echo '
-                        <div class = "container d-flex justify-content-center"">
+                        <div class = "container-fluid d-flex justify-content-center"">
                             <div class = "div_card">
             
                                 <h1 class="text text_heading center">Uniform Office Database</h1>
@@ -62,7 +62,7 @@
                     /* Technician */
                     else if($_SESSION['userUid'] == "technician"){
                         echo '
-                        <div class = "container d-flex justify-content-center"">
+                        <div class = "container-fluid d-flex justify-content-center"">
                             <div class = "div_card">
             
                                 <h1 class="text text_heading center">Uniform Office Database</h1>
@@ -82,7 +82,7 @@
                     /* Cadre */
                     else if($_SESSION['userUid'] == "cadre_member"){
                         echo '
-                        <div class = "container d-flex justify-content-center"">
+                        <div class = "container-fluid d-flex justify-content-center"">
                             <div class = "div_card">
             
                                 <h1 class="text text_heading center">Uniform Office Database</h1>
@@ -99,7 +99,7 @@
                     } 
                 } else {
                     echo '
-                    <div class = "container d-flex justify-content-center"">
+                    <div class = "container-fluid d-flex justify-content-center"">
                         <div class = "div_card text-center">
                                         
                             <h1 class = "text text_heading">Log in</h1>

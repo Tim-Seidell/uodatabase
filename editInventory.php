@@ -1,6 +1,6 @@
 <?php require 'header.php' ?>
 <div style="padding-top: 100px;">
-<div class = "container">
+<div class = "container-fluid">
     <div class = "div_card">
         <h1 class = "text text_title">Edit Inventory</h1>
         <hr>

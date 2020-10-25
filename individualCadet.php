@@ -1,6 +1,6 @@
 <?php require 'header.php' ?>
 <div style="padding-top: 100px;"></div>
-<div class = "container">
+<div class = "container-fluid">
     <div class = "div_card">
         <div class = "row">
             <div class = "col-md text-center">
