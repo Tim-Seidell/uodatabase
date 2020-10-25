@@ -6,7 +6,7 @@
     mysqli_query($conn, $sql);
 
     /* Recreate order table */
-    $sql = "CREATE TABLE current_edit (type varchar(6) not null, item varchar(20) not null, size varchar(10) not null, quantity int(3) not null);";
+    $sql = "CREATE TABLE current_edit (type varchar(6) not null, item varchar(20) not null, size varchar(15) not null, quantity int(3) not null);";
     mysqli_query($conn, $sql);
 
     // Redirect
