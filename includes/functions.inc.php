@@ -136,7 +136,7 @@
     }
 
     function dynamicOption($name, $placeholder) {
-        if($name != "orderType" && $name != "editType" && $name != "size" && $name != "") {
+        if($name != "orderType" && $name != "editType" && $name != "size") {
             require 'dbh.inc.php';
             if($name == "uniform") {
                 $uniform_table = $_SESSION[$name];
@@ -156,7 +156,7 @@
                 echo "\ndisplay: " . $display;
             }
 
-            if(isset($_SESSION[$name])) {
+            if(isset($_SESSION[$name]) && $display != "") {
                 echo '<option value="">'. $display .'</option>';
             }
             
