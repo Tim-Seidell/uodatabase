@@ -150,7 +150,7 @@
                 echo "Name: " . $name;
                 echo "\nUniform table: " .  $uniform_table;
                 echo "\nItem table: " . $item_table;
-                $sql = "SELECT * FROM $table WHERE item_table = '$item_table';";
+                $sql = "SELECT * FROM $uniform_table WHERE item_table = '$item_table';";
                 $display = mysqli_fetch_assoc(mysqli_query($conn, $sql))["item_name"];
                 echo "\nsql: " . $sql;
                 echo "\ndisplay: " . $display;
