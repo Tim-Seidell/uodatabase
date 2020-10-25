@@ -241,6 +241,7 @@ input[type=number] {
 body {
     margin: 0;
     background-color: #F5F5F5;
+    height: 100%;
 }
 
 .error {
