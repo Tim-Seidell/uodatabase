@@ -1,4 +1,12 @@
-<?php require 'header.php' ?>
+<?php require 'header.php';
+if(isset($_SESSION['userId'])) {
+    if($_SESSION['userUid'] != "administrator" && $_SESSION['userUid'] != "technician"){
+        header("Location: index.php");        
+    }
+} else {
+    header("Location: index.php");
+}
+?>
 <div style="padding-top: 100px;"></div>
 <div class = "container-fluid">
     <div class="div_card">
