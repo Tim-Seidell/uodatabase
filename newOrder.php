@@ -34,6 +34,20 @@
                             echo "<p class = \"text success\"><i class=\"fas fa-check\" style = \"float: left; margin-left: 4px; padding-right: 2px;\"></i>Your edit has been processed</p>";
                         }
                     }
+
+                    if(isset($_POST["uniform"])) {
+                        $_SESSION["orderType"] = $_POST["orderType"];
+                        $_SESSION["uniform"] = $_POST["uniform"];
+                    }
+
+                    if(isset($_POST["item"])) {
+                        $_SESSION["item"] = $_POST["item"];
+                    }
+
+                    if(isset($_POST["size"])) {
+                        $_SESSION["size"] = $_POST["size"];
+                    }
+
                 ?>
                 <form action="" method = "post">
                     <select name="orderType" class = "dropdown" style = "width: 287px; height: 43px;">
