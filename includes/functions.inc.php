@@ -145,13 +145,13 @@
             } else if($name = "item") {
                 $uniform_table = $_SESSION[$name];
                 $item_table = $_SESSION["item"];
-                echo $name;
-                echo $uniform_table;
-                echo $item_table;
+                echo "Name: " . $name;
+                echo "\nUniform table: " .  $uniform_table;
+                echo "\nItem table: " . $item_table;
                 $sql = "SELECT * FROM $uniform_table WHERE item_table = '$item_table';";
                 $display = mysqli_fetch_assoc(mysqli_query($conn, $sql))["item_name"];
-                echo $sql;
-                echo $display;
+                echo "\nsql: " . $sql;
+                echo "\ndisplay: " . $display;
             }
 
             if(isset($_SESSION[$name])) {
