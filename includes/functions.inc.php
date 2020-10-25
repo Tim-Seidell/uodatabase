@@ -134,4 +134,12 @@
             ';
         }
     }
+
+    function dynamicOption($name) {
+        if(isset($_SESSION[$name])) {
+            echo '<option value="">'. $_SESSION[$name] .'</option>';
+        } else {
+            echo '<option value="">- Type -</option>';
+        }
+    }
 ?>
