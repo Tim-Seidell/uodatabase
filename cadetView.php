@@ -66,7 +66,7 @@
                 <form action="" method="post">
                     <select name="item" class = "dropdown" style = "width: 287px; height: 43px;" onchange="this.form.submit()">
                         <?php dynamicOption("item", "- Item -");?>                        
-                        <?php dropdownOptions($_SESSION["uniform"],"uniform","uniform_name", "uniform"); ?>
+                        <?php dropdownOptions($_SESSION["uniform"],"item_name","item_table", "item_name"); ?>
                     </select>
                 </form>
 
