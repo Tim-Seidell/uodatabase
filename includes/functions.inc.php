@@ -136,7 +136,7 @@
     }
 
     function dynamicOption($name, $placeholder) {
-        if($name != "orderType" && $name != "editType" $$ $name != "size") {
+        if($name != "orderType" && $name != "editType" && $name != "size") {
             require 'dbh.inc.php';
             if($name == "uniform") {
                 $uniform_table = $_SESSION[$name];
