@@ -148,7 +148,7 @@
                         <option value="">- Type -</option>
                         <option value="order">Order</option>
                         <option value="return">Return</option>
-                    </select><br>
+                    </select>
                     <br>
                     <select name = "item" class = "dropdown" style = "width: 230px; height: 43px">
                         <option value="">- Select Item -</option>
