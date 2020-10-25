@@ -34,39 +34,39 @@
                             echo "<p class = \"text success\"><i class=\"fas fa-check\" style = \"float: left; margin-left: 4px; padding-right: 2px;\"></i>Your edit has been processed</p>";
                         }
                     }
+
+                    /* Set session variables */
+                    if(isset($_POST["uniform"])) {
+                        $_SESSION["editType"] = $_POST["editType"];
+                        $_SESSION["uniform"] = $_POST["uniform"];
+                    }
+
+                    if(isset($_POST["item"])) {
+                        $_SESSION["item"] = $_POST["item"];
+                    }
                 ?>
                 <form action="" method = "post">
                     <select name="editType" class = "dropdown" style = "width: 230px; height: 43px;">
-                        <option value="">- Add/Remove -</option>
+                        <?php dynamicOption("editType", "- Add/Remove -"); ?>
+                        <!-- <option value="">- Add/Remove -</option> -->
                         <option value="add">Add</option>
                         <option value="remove">Remove</option>
                     </select>
                     <br>
                     <select name = "uniform" style = "width: 230px; height: 43px;" class = "dropdown" onchange="this.form.submit()">
-                        <option value="">- Uniform -</option>
+                        <?php dynamicOption("uniform", "- Uniform -"); ?>
+                        <!-- <option value="">- Uniform -</option> -->
                         <?php dropdownDistinct("uniforms"); ?>
                     </select>
                 </form>
 
-                <?php
-                    if(isset($_POST["uniform"])) {
-                        $_SESSION["editType"] = $_POST["editType"];
-                        $_SESSION["uniform"] = $_POST["uniform"];
-                    }
-                ?>
-
                 <form action="" method="post">
                     <select name="item" class = "dropdown" style = "width: 230px; height: 43px;" onchange="this.form.submit()">
+                        <?php dynamicOption("item", "- Item -"); ?>
                         <option value="">- Item -</option>
                         <?php dropdownOptions($_SESSION["uniform"],"item_name","item_table", "item_name"); ?>
                     </select>
                 </form>
-                
-                <?php
-                    if(isset($_POST["item"])) {
-                        $_SESSION["item"] = $_POST["item"];
-                    }
-                ?>
 
                 <form action="includes/addToEdit.inc.php" method = "post">
                     <input type="text" class="input" style="width: 230px; height: 43px" name="size" placeholder="Size">
