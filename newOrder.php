@@ -44,7 +44,7 @@
                     </select>
                     <br>
                     <select name = "uniform" style = "width: 287px; height: 43px;" class = "dropdown" onchange="this.form.submit()">
-                        <?php dynamicOption("uniform", , "- Uniform -") ?>
+                        <?php dynamicOption("uniform", "- Uniform -") ?>
                         <!-- <option value="">- Uniform -</option> -->
                         <?php dropdownDistinct("uniforms"); ?>
                     </select>
