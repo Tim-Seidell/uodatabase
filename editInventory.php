@@ -83,7 +83,7 @@
 
                 <form action = "includes/editInventory.inc.php" method = "post">
                     <div class = "container"><div class = "center_btn">
-                        <input type = "submit" class = "button button_blue" value = "Submit Edit" style = "width: 230px; height: 43px">
+                        <input type = "submit" class = "button button_blue" value = "Submit Edit" style = "width: 230px;">
                     </div></div>
                 </form>
             </div>
@@ -96,7 +96,7 @@
                 <br>
 
                 <form action="includes/cancelEdit.inc.php">
-                    <input class = "button button_blue" type="submit" value = "Cancel Edit" style = "width: 230px; height: 43px">
+                    <input class = "button button_blue" type="submit" value = "Cancel Edit" style = "width: 230px;">
                 </form>
             </div>
         </div>
