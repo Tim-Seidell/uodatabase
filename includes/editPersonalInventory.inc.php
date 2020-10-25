@@ -124,10 +124,5 @@
     }
     echo $sql;
 
-    unset($_SESSION["orderType"]);
-    unset($_SESSION["uniform"]);
-    unset($_SESSION["item"]);
-    unset($_SESSION["size"]);
-
     header("Location: ../cadetView.php?sql=success");
 ?>
