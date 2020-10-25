@@ -7,22 +7,28 @@
                 <h1 class="text center">Inventory</h1></li>
                 <hr>
 
-                <form action="" method = "post">
-                    <select name = "uniform" style = "width: 287px; height: 43px;" class = "dropdown" onchange="this.form.submit()">
-                        <option value="">- Uniform -</option>
-                        <?php dropdownDistinct("uniforms"); ?>
-                    </select>
-                </form>
-
                 <?php
                     if(isset($_POST["uniform"])) {
                         $_SESSION["uniform"] = $_POST["uniform"];
                     }
+                
+                    if(isset($_POST["item"])) {
+                        $_SESSION["item"] = $_POST["item"];
+                    }
                 ?>
+
+                <form action="" method = "post">
+                    <select name = "uniform" style = "width: 287px; height: 43px;" class = "dropdown" onchange="this.form.submit()">
+                        <?php dynamicOption("uniform","- Uniform -") ?>
+                        <!-- <option value="">- Uniform -</option> -->
+                        <?php dropdownDistinct("uniforms"); ?>
+                    </select>
+                </form>
 
                 <form action="" method="post">
                     <select name="item" class = "dropdown" style = "width: 287px; height: 43px;" onchange="this.form.submit()">
-                        <option value="">- Item -</option>
+                        <?php dynamicOption("item","- Item -") ?>
+                        <!-- <option value="">- Item -</option> -->
                         <?php dropdownOptions($_SESSION["uniform"], "item_name", "item_table", "item_name"); ?>
                     </select>
                 </form>

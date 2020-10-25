@@ -17,42 +17,6 @@
         
         
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        <!-- <style>
-            table {
-                
-                max-height: 350px;
-                display: block;
-                overflow-y: auto;
-                white-space: nowrap;
-                background-color: white;
-                border-collapse: collapse;
-                width: 100%;
-                color: black;
-                font-family: monospace;
-                font-size: 25px;
-                text-align: center;
-                margin: auto;
-                
-                
-            }
-
-            td {
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-
-            th {
-                padding-left: 10px;
-                padding-right: 10px;
-                background-color: #3B7BED;
-                color: white;
-            }
-
-            tr:nth-child(even) {
-                background-color: #f2f2f2;
-            }
-        </style> -->
     </head>
 
     <header>
