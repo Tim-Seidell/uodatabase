@@ -110,7 +110,7 @@
         include_once 'dbh.inc.php';
         $sql = "SELECT * FROM settings WHERE setting_name = '$name'";
         $setting = mysqli_fetch_assoc(mysqli_query($conn, $sql))['setting'];
-
+    
         if($setting == -1) {
             echo "hidden";
         }

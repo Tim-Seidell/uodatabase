@@ -143,7 +143,7 @@
         </div>
 
         <div class = "row" <?php setting("ordering") ?>>
-            <div class = "col-md text-center">
+            <div class = "col-md text-center" <?php setting("ordering") ?>>
                 <!-- Place an order -->
                 <h1>Place an order</h1>
                 <hr>
@@ -165,7 +165,7 @@
                     <input type="submit" class = "button button_blue" name = "" value = "Submit" style = "width: 287px;">
                 </form>
             </div>
-            <div class = "col-md text-center">
+            <div class = "col-md text-center" <?php setting("ordering") ?>>
                 <h1>Current order</h1>
                 <hr>
                 
