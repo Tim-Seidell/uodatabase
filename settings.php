@@ -5,7 +5,7 @@
         <div class = "row">
             <div class = "col-md text-center">
                 <?php
-                require 'includes/functions.inc.php';
+                require 'includes/dbh.inc.php';
                     $sql = "SELECT * FROM settings WHERE setting_name = 'editing'";
 
                     if(mysqli_fetch_assoc(mysqli_query($conn, $sql))['setting'] == 1) {
