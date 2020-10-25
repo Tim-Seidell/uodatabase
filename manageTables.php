@@ -11,13 +11,13 @@
                 <h1 class="text">New Item</h1>
                 <hr>
                 <form action="includes/addTable.inc.php" method="POST">
-                    <select name="uniform" class = "dropdown" style = "width: 230px; height: 43px;">
+                    <select name="uniform" class = "dropdown">
                         <option value="">- Select Uniform -</option>
                         <?php dropdownOptions("uniforms", "uniform", "uniform_table", "uniform");?>
                     </select>
-                    <input type="text" class="input" name="item_display_name" placeholder="Item Name" style="width: 230px; height: 43px;">
-                    <input type="text" class="input" name="item_name" placeholder="item_name" style="width: 230px; height: 43px;">
-                    <button type="submit" class="button button_blue" style="width: 230px;" name = "newItem" value = "newItem">Create New Item</button>
+                    <input type="text" class="input" name="item_display_name" placeholder="Item Name">
+                    <input type="text" class="input" name="item_name" placeholder="item_name">
+                    <button type="submit" class="button button_blue" name = "newItem" value = "newItem">Create New Item</button>
                 </form>
             </div>
 
@@ -26,8 +26,8 @@
                 <h1 class="text">New Uniform</h1>
                 <hr>
                 <form action="includes/addTable.inc.php" method="POST">
-                    <input type="text" class="input" name="table_display_name" placeholder="Uniform Name" style="width: 230px; height: 43px;">
-                    <button type="submit" class="button button_blue" style="width: 230px;" name = "newUniform" value = "newUniform">Create New Uniform</button>
+                    <input type="text" class="input" name="table_display_name" placeholder="Uniform Name">
+                    <button type="submit" class="button button_blue" name = "newUniform" value = "newUniform">Create New Uniform</button>
                 </form>
             </div>
 
@@ -36,8 +36,8 @@
                 <h1 class="text">Remove Table</h1>
                 <hr>
                 <form action="includes/removeTable.inc.php" method="POST">
-                    <input type="text" class="input" name="table_name" placeholder="table_name" style="width: 230px; height: 43px;">
-                    <button type="submit" class="button button_blue" style="width: 230px;">Remove Table</button>
+                    <input type="text" class="input" name="table_name" placeholder="table_name">
+                    <button type="submit" class="button button_blue">Remove Table</button>
                 </form>
             </div>
         </div>
@@ -50,10 +50,10 @@
                 <h1 class="text">Add Column</h1>
                 <hr>
                 <form action="includes/addColumn.inc.php" method="POST">
-                    <input type="text" class="input" name="table_name" placeholder="table_name" style="width: 230px; height: 43px;">
-                    <input type="text" class="input" name="column_name" placeholder="column_name" style="width: 230px; height: 43px;">
-                    <input type="text" class="input" name="attributes" placeholder="attributes" style="width: 230px; height: 43px;">
-                    <button type="submit" class="button button_blue" style="width: 230px;">Add Column</button>
+                    <input type="text" class="input" name="table_name" placeholder="table_name">
+                    <input type="text" class="input" name="column_name" placeholder="column_name">
+                    <input type="text" class="input" name="attributes" placeholder="attributes">
+                    <button type="submit" class="button button_blue">Add Column</button>
                 </form>
             </div>
 
@@ -62,9 +62,9 @@
                 <h1 class="text">Remove Column</h1>
                 <hr>
                 <form action="includes/removeColumn.inc.php" method="POST">
-                    <input type="text" class="input" name="table_name" placeholder="table_name" style="width: 230px; height: 43px;">
-                    <input type="text" class="input" name="column_name" placeholder="column_name" style="width: 230px; height: 43px;">
-                    <button type="submit" class="button button_blue" style="width: 230px;">Remove Column</button>
+                    <input type="text" class="input" name="table_name" placeholder="table_name">
+                    <input type="text" class="input" name="column_name" placeholder="column_name">
+                    <button type="submit" class="button button_blue">Remove Column</button>
                 </form>
             </div>
 
@@ -72,15 +72,15 @@
                 <h1 class="text">Test</h1>
                 <hr>
                 <form action="includes/removeColumn.inc.php" method="POST">
-                    <select class="dropdown" name="" style="width: 230px; height: 43px;">
+                    <select class="dropdown" name="">
                         <option value="Select Column">- Column -</option>
                         <?php
                             dropdownColumns("cadets");
                         ?>
                     </select>
-                    <input type="text" class="input" name="table_name" placeholder="table_name" style="width: 230px; height: 43px;">
-                    <input type="text" class="input" name="column_name" placeholder="column_name" style="width: 230px; height: 43px;">
-                    <button type="submit" class="button button_blue" style="width: 230px;">Remove Column</button>
+                    <input type="text" class="input" name="table_name" placeholder="table_name">
+                    <input type="text" class="input" name="column_name" placeholder="column_name">
+                    <button type="submit" class="button button_blue">Remove Column</button>
                 </form>
             </div>
 

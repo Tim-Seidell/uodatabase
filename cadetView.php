@@ -51,34 +51,34 @@
                     }
                 ?>
                 <form action="" method = "post">
-                    <select name="orderType" class = "dropdown" style = "width: 287px; height: 43px;">
+                    <select name="orderType" class = "dropdown">
                         <?php dynamicOption("orderType", "- Type -");?>  
                         <option value="add">Add</option>
                         <option value="return">Return</option>
                     </select>
                     <br>
-                    <select name = "uniform" style = "width: 287px; height: 43px;" class = "dropdown" onchange="this.form.submit()">
+                    <select name = "uniform" class = "dropdown" onchange="this.form.submit()">
                         <?php dynamicOption("uniform", "- Uniform -");?>                        
                         <?php dropdownDistinct("uniforms"); ?>
                     </select>
                 </form>
 
                 <form action="" method="post">
-                    <select name="item" class = "dropdown" style = "width: 287px; height: 43px;" onchange="this.form.submit()">
+                    <select name="item" class = "dropdown" onchange="this.form.submit()">
                         <?php dynamicOption("item", "- Item -");?>                        
                         <?php dropdownOptions($_SESSION["uniform"],"item_name","item_table", "item_name"); ?>
                     </select>
                 </form>
 
                 <form action="includes/editPersonalInventory.inc.php" method = "post">
-                    <select name = "size" style = "width: 287px; height: 43px;" class = "dropdown">
+                    <select name = "size" class = "dropdown">
                         <option value="">- Size -</option>
                         <?php dropdownOptions($_SESSION["item"],"size","size", "size"); ?>
                     </select>
                     <br>
-                    <input type="number" placeholder = "Quantity" name = "quantity" class = "input" style = "width: 287px; height: 43px;">
+                    <input type="number" placeholder = "Quantity" name = "quantity" class = "input">
                     <br>
-                    <input type="submit" class = "button button_blue" value = "submit" style = "width: 287px;">
+                    <input type="submit" class = "button button_blue" value = "submit">
                 </form>
             </div>
 
@@ -103,7 +103,7 @@
                     <div class = "row">
                         <div class = "col-md text-center">
                             <form action="" method = "post">
-                                <select name = "uniform" style = "width: 287px; height: 43px;" class = "dropdown" onchange="this.form.submit()">
+                                <select name = "uniform" class = "dropdown" onchange="this.form.submit()">
                                     <?php dynamicOption("uniform", "- Uniform -");?>
                                     <?php dropdownDistinct("uniforms"); ?>
                                 </select>
@@ -111,7 +111,7 @@
 
                             
                             <form action="" method="post">
-                                <select name="item" class = "dropdown" style = "width: 287px; height: 43px;" onchange="this.form.submit()">
+                                <select name="item" class = "dropdown" onchange="this.form.submit()">
                                     <?php dynamicOption("item", "- Item -");?>
                                     <?php dropdownOptions($_SESSION["uniform"], "item_name", "item_table", "item_name"); ?>
                                 </select>
@@ -150,14 +150,14 @@
                         <option value="return">Return</option>
                     </select><br>
                     
-                    <select name = "item" style = "width: 287px; height: 43px" class = "dropdown">
+                    <select name = "item" class = "dropdown">
                         <option value="">- Select Item -</option>
                         <?php dropdownOptions("list_of_uniform_items","item_name","item_table_name", "item_name"); ?>
                     </select>
 
-                    <input type="text" class = "input" name = "size" placeholder = "Size" style = "width: 287px; height: 43px;">
-                    <input type="text" class = "input" name = "quantity" placeholder = "Quantity" style = "width: 287px; height: 43px;">     
-                    <input type="submit" class = "button button_blue" name = "" value = "Submit" style = "width: 287px;">
+                    <input type="text" class = "input" name = "size" placeholder = "Size">
+                    <input type="text" class = "input" name = "quantity" placeholder = "Quantity">     
+                    <input type="submit" class = "button button_blue" name = "" value = "Submit">
                 </form>
             </div>
             <div class = "col-md text-center" style = "height: 600px">

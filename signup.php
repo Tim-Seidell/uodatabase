@@ -9,11 +9,11 @@
             <div class = "col-md text-center"></div>
             <div class = "col-md text-center">
                 <form action="includes/signup.inc.php"  method = "post">
-                        <input type="text" name = "firstname" placeholder = "First name" class = "input" style = "width: 276px; height: 43px;">
+                        <input type="text" name = "firstname" placeholder = "First name" class = "input">
                         
-                        <input type="text" name = "lastname" placeholder = "Last name" class = "input" style = "width: 276px; height: 43px;">
+                        <input type="text" name = "lastname" placeholder = "Last name" class = "input">
                         
-                        <select class = "dropdown" name="asyear" style = "width: 276px; height: 43px;">
+                        <select class = "dropdown" name="asyear">
                             <option value="">- AS Year -</option>
                             <option value="100">100</option>
                             <option value="200">200</option>
@@ -24,19 +24,19 @@
                             <option value="800">800</option>
                         </select>
                         
-                        <select class = "dropdown" name="contracted" style = "width: 276px; height: 43px;">
+                        <select class = "dropdown" name="contracted">
                             <option value="">- Contracted -</option>
                             <option value="Y">Yes</option>
                             <option value="N">No</option>
                         </select>
                         
-                        <input type="text" name = "email" placeholder = "E-mail" class = "input" style = "width: 276px; height: 43px;">
+                        <input type="text" name = "email" placeholder = "E-mail" class = "input">
                         
-                        <input type="password" name = "password1" placeholder = "Password" class = "input" style = "width: 276px; height: 43px;">
+                        <input type="password" name = "password1" placeholder = "Password" class = "input">
                         
-                        <input type="password" name = "password2" placeholder = "Re-type password" class = "input" style = "width: 276px; height: 43px;">
+                        <input type="password" name = "password2" placeholder = "Re-type password" class = "input">
                         
-                        <input type="submit" name = "signup-submit" class = "button button_blue center" style = "width: 276px;">
+                        <input type="submit" name = "signup-submit" class = "button button_blue center">
                 </form>
             </div>
             <div class = "col-md text-center"></div>

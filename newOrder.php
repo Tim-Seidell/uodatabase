@@ -51,34 +51,34 @@
 
                 <!-- Add to Order Form -->
                 <form action="" method = "post">
-                    <select name="orderType" class = "dropdown" style = "width: 287px; height: 43px;">
+                    <select name="orderType" class = "dropdown">
                         <?php dynamicOption("orderType", "- Type -") ?>
                         <option value="issue">Issue</option>
                         <option value="return">Return</option>
                     </select>
                     <br>
-                    <select name = "uniform" style = "width: 287px; height: 43px;" class = "dropdown" onchange="this.form.submit()">
+                    <select name = "uniform" class = "dropdown" onchange="this.form.submit()">
                         <?php dynamicOption("uniform", "- Uniform -") ?>
                         <?php dropdownDistinct("uniforms"); ?>
                     </select>
                 </form>
 
                 <form action="" method="post">
-                    <select name="item" class = "dropdown" style = "width: 287px; height: 43px;" onchange="this.form.submit()">
+                    <select name="item" class = "dropdown" onchange="this.form.submit()">
                         <?php dynamicOption("item", "- Item -") ?>
                         <?php dropdownOptions($_SESSION["uniform"], "item_name", "item_table", "item_name"); ?>
                     </select>
                 </form>
                 
                 <form action="includes/addToOrder.inc.php" method = "post">
-                    <select name = "size" style = "width: 287px; height: 43px;" class = "dropdown">
+                    <select name = "size" class = "dropdown">
                         <?php dynamicOption("size", "- Size -") ?>
                         <?php dropdownOptions($_SESSION["item"], "size", "size", "size"); ?>
                     </select>
                     <br>
-                    <input type="number" placeholder = "Quantity" name = "quantity" class = "input" style = "width: 287px; height: 43px;">
+                    <input type="number" placeholder = "Quantity" name = "quantity" class = "input">
                     <br>
-                    <input type="submit" class = "button button_blue" value = "submit" style = "width: 287px;">
+                    <input type="submit" class = "button button_blue" value = "submit">
                 </form>
 
                 <!-- Submit Order -->
@@ -86,18 +86,18 @@
                 <hr>
                 <form action = "includes/submitOrder.inc.php" method = "POST">
                     <div hidden>
-                        <input type="text" name="id" style="width: 230px; height: 43px;" class="input" placeholder="Swipe">
+                        <input type="text" name="id" class="input" placeholder="Swipe">
                         <br>
                         <h3>Or</h3>
                         <br>
                     </div>
 
-                    <select name="name" style="width: 230px" class="dropdown">
+                    <select name="name" class="dropdown">
                         <option value="">- Name -</option>
                         <?php dropdownOptions("cadets", "Lastname", "cadet_table_name", "Lastname"); ?>
                     </select>
                     <br>
-                    <input type = "submit" style="width: 230px" class = "button button_blue" value = "Submit Order">
+                    <input type = "submit" class = "button button_blue" value = "Submit Order">
                 </form>
             </div>
 
@@ -110,7 +110,7 @@
                 <br>
             
                 <form action="includes/cancelOrder.inc.php" style = "display: block">
-                    <input class = "button button_blue" style="width: 230px;" type="submit" value = "Cancel Order">
+                    <input class = "button button_blue" type="submit" value = "Cancel Order">
                 </form>
             </div>
         </div>
