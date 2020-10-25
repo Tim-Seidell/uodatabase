@@ -42,7 +42,7 @@
                         ';
                     }
 
-                    setting_button("Test");
+                    //setting_button("Test");
                 ?>  
 
             </div>
