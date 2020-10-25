@@ -8,7 +8,7 @@
                 if(isset($_SESSION['userId'])) {
                     
                     /* Cadet view */
-                    if($_SESSION['userUid'] != "administrator" && $_SESSION['userUid'] != "uniform_officer" && $_SESSION['userUid'] != "uo_technician" && $_SESSION['userUid'] != "cadre_member") {
+                    if($_SESSION['userUid'] != "administrator" && $_SESSION['userUid'] != "uniform_officer" && $_SESSION['userUid'] != "technician" && $_SESSION['userUid'] != "cadre_member") {
                         header("Location: cadetView.php");
                     }
                     
