@@ -37,6 +37,13 @@
                 ?>
                 <form action="" method = "post">
                     <select name="orderType" class = "dropdown" style = "width: 287px; height: 43px;">
+                        <?php echo '<option value="">'. 
+                                if(isset($_SESSION["orderType"])) {
+                                    echo $_SESSION["orderType"];
+                                } else {
+                                    echo '- Type -';
+                                }
+                                . '</option>';?>
                         <option value="">- Type -</option>
                         <option value="issue">Issue</option>
                         <option value="return">Return</option>

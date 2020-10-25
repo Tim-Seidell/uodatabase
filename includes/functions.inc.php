@@ -113,8 +113,6 @@
     
         if($setting == -1) {
             echo "hidden";
-        } else {
-            echo "test";
         }
     }
 
