@@ -47,48 +47,32 @@
                     if(isset($_POST["size"])) {
                         $_SESSION["size"] = $_POST["size"];
                     }
-
                 ?>
+
+                <!-- Add to Order Form -->
                 <form action="" method = "post">
                     <select name="orderType" class = "dropdown" style = "width: 287px; height: 43px;">
                         <?php dynamicOption("orderType", "- Type -") ?>
-                        <!-- <option value="">- Type -</option> -->
                         <option value="issue">Issue</option>
                         <option value="return">Return</option>
                     </select>
                     <br>
                     <select name = "uniform" style = "width: 287px; height: 43px;" class = "dropdown" onchange="this.form.submit()">
                         <?php dynamicOption("uniform", "- Uniform -") ?>
-                        <!-- <option value="">- Uniform -</option> -->
                         <?php dropdownDistinct("uniforms"); ?>
                     </select>
                 </form>
 
-                <?php
-                    if(isset($_POST["uniform"])) {
-                        $_SESSION["orderType"] = $_POST["orderType"];
-                        $_SESSION["uniform"] = $_POST["uniform"];
-                    }
-                ?>
-
                 <form action="" method="post">
                     <select name="item" class = "dropdown" style = "width: 287px; height: 43px;" onchange="this.form.submit()">
                         <?php dynamicOption("item", "- Item -") ?>
-                        <!-- <option value="">- Item -</option> -->
                         <?php dropdownOptions($_SESSION["uniform"], "item_name", "item_table", "item_name"); ?>
                     </select>
                 </form>
                 
-                <?php
-                    if(isset($_POST["item"])) {
-                        $_SESSION["item"] = $_POST["item"];
-                    }
-                ?>
-
                 <form action="includes/addToOrder.inc.php" method = "post">
                     <select name = "size" style = "width: 287px; height: 43px;" class = "dropdown">
                         <?php dynamicOption("size", "- Size -") ?>
-                        <!-- <option value="">- Size -</option> -->
                         <?php dropdownOptions($_SESSION["item"], "size", "size", "size"); ?>
                     </select>
                     <br>
@@ -97,31 +81,19 @@
                     <input type="submit" class = "button button_blue" value = "submit" style = "width: 287px;">
                 </form>
 
-                <?php
-                    if(isset($_POST["size"])) {
-                        $_SESSION["size"] = $_POST["size"];
-                    }
-                ?>
-
+                <!-- Submit Order -->
                 <h1>Submit Order</h1>
                 <hr>
-
                 <form action = "includes/submitOrder.inc.php" method = "POST">
                     <input type="text" name="id" style="width: 230px; height: 43px;" class="input" placeholder="Swipe">
-
                     <br>
-
                     <h3>Or</h3>
-
                     <br>
-
                     <select name="name" style="width: 230px" class="dropdown">
                         <option value="">- Name -</option>
                         <?php dropdownOptions("cadets", "Lastname", "cadet_table_name", "Lastname"); ?>
                     </select>
-                    
                     <br>
-
                     <input type = "submit" style="width: 230px" class = "button button_blue" value = "Submit Order">
                 </form>
             </div>
