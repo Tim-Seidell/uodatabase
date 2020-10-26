@@ -38,7 +38,11 @@
         <!-- Prints table -->
         <?php
             ini_set("display_errors", 0);
-            printTable($_POST['item']);
+            if(isset($_SESSION['item'])) {
+                printTable($_SESSION['item']);
+            } else {
+                printTable($_POST['item']);                                    
+            }
         ?>
     </div>
 </div>

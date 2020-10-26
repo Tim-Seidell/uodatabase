@@ -1,4 +1,5 @@
 <?php
+    session_start();
     /* Database connection */
     include_once 'dbh.inc.php';
 
@@ -17,6 +18,8 @@
             echo "no input";
         }
     }
+    
+    $_SESSION['selectedTable'] = $name;
 
     /* Select all in current order */
     $sql = "SELECT * FROM current_order";
