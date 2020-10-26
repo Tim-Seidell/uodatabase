@@ -142,29 +142,26 @@
                 $uniform_table = $_SESSION[$name];
                 $sql = "SELECT * FROM uniforms WHERE uniform_table = '$uniform_table';";
                 $display = mysqli_fetch_assoc(mysqli_query($conn, $sql))["uniform"];
+                $value = $_SESSION[$name];
             } else if($name = "item") {
                 $uniform_table = $_SESSION["uniform"];
                 $sql = "SELECT * FROM uniforms WHERE uniform_table = '$uniform_table';";
                 $table = mysqli_fetch_assoc(mysqli_query($conn, $sql))["uniform"];
                 $item_table = $_SESSION["item"];
-                echo "Name: " . $name;
-                echo "\nUniform table: " .  $uniform_table;
-                echo "\nItem table: " . $item_table;
                 $sql = "SELECT * FROM $uniform_table WHERE item_table = '$item_table';";
                 $display = mysqli_fetch_assoc(mysqli_query($conn, $sql))["item_name"];
-                echo "\nsql: " . $sql;
-                echo "\ndisplay: " . $display;
+                $value = $item_table;
             }
 
             if(isset($_SESSION[$name]) && $display != "") {
-                echo '<option value="">'. $display .'</option>';
+                echo '<option value="'. $value .'">'. $display .'</option>';
             }
             
             echo '<option value="">'. $placeholder .'</option>';
 
         } else {
             if(isset($_SESSION[$name])) {
-                echo '<option value="">'. ucfirst($_SESSION[$name]) .'</option>';
+                echo '<option value="'. $_SESSION[$name] .'">'. ucfirst($_SESSION[$name]) .'</option>';
             }
             
             echo '<option value="">'. $placeholder .'</option>';
