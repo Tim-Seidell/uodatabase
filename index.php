@@ -30,7 +30,7 @@
                                     <li><a href="report.php"          target="_self"><button class="button button_blue">Get Report</button>     </a></li> 
                                     <li><a href="individualCadet.php" target="_self"><button class="button button_blue">View Cadet</button>     </a></li>
                                     <li><a href="cadetView.php"       target="_self"><button class="button button_blue">Cadet View</button>     </a></li>
-                                    <li><a href="settings.php"       target="_self"><button class="button button_blue">settings</button>     </a></li>
+                                    <li><a href="settings.php"       target="_self"><button class="button button_blue">Settings</button>     </a></li>
                                 </ul>   
                             </div>
                         </div>
