@@ -122,7 +122,6 @@
         }
          
     }
-    echo $sql;
 
     header("Location: ../cadetView.php?sql=success");
 ?>
