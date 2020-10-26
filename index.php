@@ -135,7 +135,7 @@
                             <form action="includes/loginSystem.inc.php" method="post">
                                 <input type="text"     class = "input"              name = "mailuid"  placeholder = "Username or E-mail" style = "width: 230px; height: 43px"><br>
                                 <input type="password" class = "input"              name = "password" placeholder = "password" style = "width: 230px; height: 43px"><br>
-                                <input type="submit"   class = "button button_blue" name = "login-submit" value = "Login" style = "width: 230px; height: 43px">
+                                <input type="submit"   class = "button button_blue" name = "login-submit" value = "Login" style = "width: 230px;">
                             </form>
                             
                             <h1 class = "text">or</h1>
