@@ -19,7 +19,7 @@
                 <?php
                     ini_set("display_errors", 0);
 
-                    if(isset($_POST['selectedTable']) {
+                    if(isset($_POST['selectedTable'])) {
                         $table = $_POST['selectedTable'];
                     } else {
                         $table = $_SESSION['selectedTable'];
