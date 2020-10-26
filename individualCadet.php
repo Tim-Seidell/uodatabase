@@ -23,6 +23,8 @@
                     if(isset($_POST['selectedTable'])) {
                         printTable($_POST['selectedTable']);
                         $_SESSION['selectedTable'] = $_POST['selectedTable'];
+
+                        echo $_SESSION['selectedTable'];
                     } else {
                         printTable($_SESSION['selectedTable']);                                    
                     }
