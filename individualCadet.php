@@ -9,8 +9,8 @@
                 
                 <form method="POST">
                     <select class="dropdown" name="selectedTable" style = "width: 230px; height: 43px" onchange="this.form.submit()">
-                        <?php dynamicOption("selectedTable", "- Select Cadet -");?>
-                        <!-- <option value="">- Select Cadet -</option> -->
+                        
+                        <option value="">- Select Cadet -</option>
                         <?php dropdownOptions("cadets","Lastname","cadet_table_name", "Lastname"); ?>
                     </select>
                 </form>
@@ -19,7 +19,7 @@
                 <?php
                     ini_set("display_errors", 0);
 
-                    echo "<center><h2 class=\"text\">" . $_POST['selectedTable'] . "</h2></center>";
+                    echo "<center><h2 class=\"text\">" . if(isset($_POST['selectedTable']) {echo $_POST['selectedTable'];} else {echo $_SESSION['selectedTable'];} . "</h2></center>";
                     if(isset($_POST['selectedTable'])) {
                         printTable($_POST['selectedTable']);
                         $_SESSION['selectedTable'] = $_POST['selectedTable'];
