@@ -49,6 +49,10 @@
                     if(isset($_POST["uniform"])) {
                         $_SESSION["uniform"] = $_POST["uniform"];
                     }
+
+                    if(isset($_POST["size"])) {
+                        $_SESSION["size"] = $_POST["size"];
+                    }
                 ?>
                 <form action="" method = "post">
                     <select name="orderType" class = "dropdown" style = "width: 230px; height: 43px">
@@ -72,7 +76,8 @@
 
                 <form action="includes/editPersonalInventory.inc.php" method = "post">
                     <select name = "size" class = "dropdown" style = "width: 230px; height: 43px">
-                        <option value="">- Size -</option>
+                        <?php dynamicOption("size", "- Size -");?>
+                        <!-- <option value="">- Size -</option> -->
                         <?php dropdownOptions($_SESSION["item"],"size","size", "size"); ?>
                     </select>
                     <br>
