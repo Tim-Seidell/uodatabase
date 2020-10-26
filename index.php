@@ -1,4 +1,4 @@
-<?php require 'header.php' ?>
+<?php require 'header.php'; authenticate("cadet"); ?>
     <main>
         <div style="padding-top: 100px;"></div>
         <!-- <div class = "center" class="container col-xl-6" style = "background-color: white; padding: 50px 25px; border-radius: 10px; box-shadow: 2px 2px 5px grey;"> -->

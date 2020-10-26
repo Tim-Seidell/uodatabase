@@ -1,4 +1,4 @@
-<?php require 'header.php' ?>
+<?php require 'header.php'; authenticate("UO"); ?>
 <div style = "padding-top: 100px;">
 <div class = "container-fluid">
 <div class = "div_card">

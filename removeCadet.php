@@ -1,4 +1,4 @@
-<?php require 'header.php' ?>
+<?php require 'header.php'; authenticate("admin"); ?>
 <div style="padding-top: 100px;"></div>
 <div class = "container-fluid">
     <div class = "div_card">
