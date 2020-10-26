@@ -22,6 +22,7 @@
                     echo "<center><h2 class=\"text\">" . $_POST['selectedTable'] . "</h2></center>";
                     if(isset($_POST['selectedTable'])) {
                         printTable($_POST['selectedTable']);
+                        $_SESSION['selectedTable'] = $_POST['selectedTable'];
                     } else {
                         printTable($_SESSION['selectedTable']);                                    
                     }
