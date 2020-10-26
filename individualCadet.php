@@ -19,7 +19,13 @@
                 <?php
                     ini_set("display_errors", 0);
 
-                    echo "<center><h2 class=\"text\">" . if(isset($_POST['selectedTable']) {echo $_POST['selectedTable'];} else {echo $_SESSION['selectedTable'];} . "</h2></center>";
+                    if(isset($_POST['selectedTable']) {
+                        $table = $_POST['selectedTable'];
+                    } else {
+                        $table = $_SESSION['selectedTable'];
+                    }
+
+                    echo "<center><h2 class=\"text\">" . $table . "</h2></center>";
                     if(isset($_POST['selectedTable'])) {
                         printTable($_POST['selectedTable']);
                         $_SESSION['selectedTable'] = $_POST['selectedTable'];
