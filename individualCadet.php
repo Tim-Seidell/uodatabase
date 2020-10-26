@@ -19,10 +19,10 @@
                     ini_set("display_errors", 0);
 
                     echo "<center><h2 class=\"text\">" . $_POST['selectedTable'] . "</h2></center>";
-                    if(isset($_SESSION['selectedTable'])) {
-                        printTable($_SESSION['selectedTable']);
+                    if(isset($_POST['selectedTable'])) {
+                        printTable($_POST['selectedTable']);
                     } else {
-                        printTable($_POST['selectedTable']);                                    
+                        printTable($_SESSION['selectedTable']);                                    
                     }
                 ?>
             </div>
