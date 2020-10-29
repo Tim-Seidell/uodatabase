@@ -94,7 +94,7 @@
 
                     <select name="name" class="dropdown" style = "width: 230px; height: 43px">
                         <option value="">- Name -</option>
-                        <?php dropdownOptions("cadets", "Lastname", "cadet_table_name", "Lastname"); ?>
+                        <?php dropdownOptions("cadets", "names", "cadet_table_name", "Lastname"); ?>
                     </select>
                     <br>
                     <input type = "submit" class = "button button_blue" value = "Submit Order" style = "width: 230px;">
