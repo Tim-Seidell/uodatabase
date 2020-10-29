@@ -11,7 +11,7 @@
                     <select class="dropdown" name="selectedTable" style = "width: 230px; height: 43px" onchange="this.form.submit()">
                         
                         <option value="">- Select Cadet -</option>
-                        <?php dropdownOptions("cadets","Lastname","cadet_table_name", "Lastname"); ?>
+                        <?php dropdownOptions("cadets","names","cadet_table_name", "Lastname"); ?>
                     </select>
                 </form>
 
