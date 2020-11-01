@@ -95,7 +95,7 @@
                         include_once "includes/functions.inc.php"; 
                         ini_set("display_errors", 0);
 
-                        printTable($_SESSION["userUid"]);
+                        printTable($_SESSION["userUid"], "item");
                     ?>
                 </div>
             </div>
@@ -131,9 +131,9 @@
                             <?php
                                 ini_set("display_errors", 0);
                                 if(isset($_SESSION['item'])) {
-                                    printTable($_SESSION['item'], "none");
+                                    printTable($_SESSION['item'], "size");
                                 } else {
-                                    printTable($_POST['item'], "none");                                    
+                                    printTable($_POST['item'], "size");                                    
                                 }
 
                             ?>
