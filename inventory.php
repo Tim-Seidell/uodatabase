@@ -39,9 +39,9 @@
         <?php
             ini_set("display_errors", 0);
             if(isset($_SESSION['item'])) {
-                printTable($_SESSION['item']);
+                printTable($_SESSION['item'], "size");
             } else {
-                printTable($_POST['item']);                                    
+                printTable($_POST['item'], "size");                                    
             }
         ?>
     </div>

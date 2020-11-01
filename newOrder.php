@@ -106,7 +106,7 @@
                 <h1>Current Order</h1>
                 <hr>
 
-                <?php printTable("current_order"); ?>
+                <?php printTable("current_order", "none"); ?>
                 <br>
             
                 <form action="includes/cancelOrder.inc.php" style = "display: block">

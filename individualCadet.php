@@ -27,9 +27,9 @@
 
                     echo "<center><h2 class=\"text\">" . $table . "</h2></center>";
                     if(isset($_POST['selectedTable'])) {
-                        printTable($_POST['selectedTable']);
+                        printTable($_POST['selectedTable'], "item");
                     } else {
-                        printTable($_SESSION['selectedTable']);                                    
+                        printTable($_SESSION['selectedTable'], "item");                                    
                     }
                 ?>
             </div>

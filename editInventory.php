@@ -91,7 +91,7 @@
             <div class = "col-md text-center" style = "height: 600px">
                 <h1>Current Edit</h1>
                 <hr>       
-                <?php printTable("current_edit"); ?>
+                <?php printTable("current_edit", "item"); ?>
 
                 <br>
 

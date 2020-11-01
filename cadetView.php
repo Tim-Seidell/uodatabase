@@ -131,9 +131,9 @@
                             <?php
                                 ini_set("display_errors", 0);
                                 if(isset($_SESSION['item'])) {
-                                    printTable($_SESSION['item']);
+                                    printTable($_SESSION['item'], "item");
                                 } else {
-                                    printTable($_POST['item']);                                    
+                                    printTable($_POST['item'], "item");                                    
                                 }
 
                             ?>
@@ -176,7 +176,7 @@
                 <h1>Current order</h1>
                 <hr>
                 
-                <?php include_once 'includes/functions.inc.php'; printTable("fuentes_david"); ?>
+                <?php include_once 'includes/functions.inc.php'; printTable("fuentes_david", "item"); ?>
             </div>
         </div>
     </div>
