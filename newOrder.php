@@ -19,7 +19,7 @@
 
                         /* Don't have item */
                         if($_GET['error'] == "noitem") {
-                            echo "<p class = \"text error\"><i class=\"fas fa-times\" style = \"float: left; margin-left: 4px;\"></i>Cadet does not have one of these items</p>";
+                            echo "<p class = \"text error\"><i class=\"fas fa-times\" style = \"float: left; margin-left: 4px;\"></i>Cadet does not have ". $_GET['item'] . ": " . $_GET['size'] ."</p>";
                         }
 
                         /* Don't have item */
