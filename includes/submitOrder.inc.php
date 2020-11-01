@@ -5,6 +5,11 @@
 
     //include_once 'functions.inc.php';
     /* Post variables: ID or name of order recipient */
+    if(empty($_POST['id']) && empty($_POST['name'])) {
+        header("Location: ../signup.php?error=emptyfields");
+        exit();
+    }
+
     $id   = mysqli_real_escape_string($conn, $_POST['id']);
     $name = mysqli_real_escape_string($conn, $_POST['name']);
 
@@ -15,7 +20,8 @@
             $result = mysqli_query($conn, $sql);
             $name = mysqli_fetch_assoc($result)['cadet_table_name'];
         } else {
-            echo "no input";
+            header("Location: ../signup.php?error=emptyfields");
+            exit();
         }
     }
     
