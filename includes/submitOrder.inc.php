@@ -74,6 +74,8 @@
                 }
             } else {
                 /* Error: Item not in stock*/
+                header("Location: ../newOrder.php?error=nostock");
+                exit();
             }
         } else { /* Remove from cadet and add to master */
             /* Check cadet inventory if exists */
@@ -104,6 +106,8 @@
 
             } else {
                 /* Error: cadet does not have enough of item */
+                header("Location: ../newOrder.php?error=noitem");
+                exit();
             }
         }
 

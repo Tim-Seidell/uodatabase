@@ -19,7 +19,12 @@
 
                         /* Don't have item */
                         if($_GET['error'] == "noitem") {
-                            echo "<p class = \"text error\"><i class=\"fas fa-times\" style = \"float: left; margin-left: 4px;\"></i>You cannot return items that you don't have</p>";
+                            echo "<p class = \"text error\"><i class=\"fas fa-times\" style = \"float: left; margin-left: 4px;\"></i>Cadet does not have one of these items</p>";
+                        }
+
+                        /* Don't have item */
+                        if($_GET['error'] == "nostock") {
+                            echo "<p class = \"text error\"><i class=\"fas fa-times\" style = \"float: left; margin-left: 4px;\"></i>An item is not in stock</p>";
                         }
 
                         /* sql error */
