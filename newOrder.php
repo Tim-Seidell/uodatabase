@@ -24,7 +24,7 @@
 
                         /* Don't have item */
                         if($_GET['error'] == "nostock") {
-                            echo "<p class = \"text error\"><i class=\"fas fa-times\" style = \"float: left; margin-left: 4px;\"></i>An item is not in stock</p>";
+                            echo "<p class = \"text error\"><i class=\"fas fa-times\" style = \"float: left; margin-left: 4px;\"></i>" . $_GET['item'] . ": " . $_GET['size'] . " is not in stock</p>";
                         }
 
                         /* sql error */
