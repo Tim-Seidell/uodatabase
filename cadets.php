@@ -15,7 +15,7 @@
                 <?php
                     include_once 'includes/functions.inc.php';
 
-                    printTable("cadets");
+                    printTable("cadets", "Lastname");
                 ?>
             </div>
         </div>

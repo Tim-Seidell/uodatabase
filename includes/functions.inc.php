@@ -1,6 +1,6 @@
 <?php
     //Prints a table from table name
-    function printTable($table) {
+    function printTable($table, $order) {
         include 'dbh.inc.php';
         //Check connection
         if ($conn->connect_error) {
@@ -13,10 +13,15 @@
         $resultCheck_columns = mysqli_num_rows($result_columns);
         
         //Get table data
-        $sql_data = "SELECT * FROM $table";
-        $result_data = mysqli_query($conn, $sql_data);
-        $resultCheck_data = mysqli_num_rows($result_data);
-        
+        if($order == "none") {
+            $sql_data = "SELECT * FROM $table";
+            $result_data = mysqli_query($conn, $sql_data);
+            $resultCheck_data = mysqli_num_rows($result_data);
+        } else {
+            $sql_data = "SELECT * FROM $table ORDER BY $order";
+            $result_data = mysqli_query($conn, $sql_data);
+            $resultCheck_data = mysqli_num_rows($result_data);            
+        }        
         
         //Print Column names with table data
         if ($resultCheck_columns > 0 && $resultCheck_data > 0) {
