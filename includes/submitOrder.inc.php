@@ -42,7 +42,7 @@
             $cadet_item_exists = 0;
         }
 
-
+        /* Check if item exists in master inventory */
         $master_item_exists_sql = "SELECT * FROM $item WHERE size = '$size'";
         $master_item_exists_result = mysqli_query($conn, $master_item_exists_sql);
         if($master_item_exists_result) {
