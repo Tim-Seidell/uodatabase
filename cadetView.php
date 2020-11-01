@@ -58,7 +58,7 @@
                     <select name="orderType" class = "dropdown" style = "width: 230px; height: 43px">
                         <?php dynamicOption("orderType", "- Type -");?>  
                         <option value="add">Add</option>
-                        <option value="return">Return</option>
+                        <option value="remove">Remove</option>
                     </select>
                     <br>
                     <select name = "uniform" class = "dropdown" style = "width: 230px; height: 43px" onchange="this.form.submit()">

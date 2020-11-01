@@ -110,7 +110,7 @@
             }
 
             /* Increment master in_stock and decrement master issued */
-            $sql = "UPDATE $item SET in_stock = in_stock + ?, issued = issued - ? WHERE size = ?";
+            $sql = "UPDATE $item SET issued = issued - ?, total = total - ? WHERE size = ?";
             $stmt = mysqli_stmt_init($conn);
             if(!mysqli_stmt_prepare($stmt, $sql)) {
                 header("Location: ../cadetView.php?error=sqlerror");
