@@ -131,9 +131,9 @@
                             <?php
                                 ini_set("display_errors", 0);
                                 if(isset($_SESSION['item'])) {
-                                    printTable($_SESSION['item'], "item");
+                                    printTable($_SESSION['item'], "none");
                                 } else {
-                                    printTable($_POST['item'], "item");                                    
+                                    printTable($_POST['item'], "none");                                    
                                 }
 
                             ?>
