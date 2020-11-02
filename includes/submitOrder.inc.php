@@ -3,13 +3,13 @@
     /* Database connection */
     include_once 'dbh.inc.php';
 
-    //include_once 'functions.inc.php';
-    /* Post variables: ID or name of order recipient */
+    /* Check for empty fields */
     if(empty($_POST['id']) && empty($_POST['name'])) {
         header("Location: ../signup.php?error=emptyfields");
         exit();
     }
 
+    /* Post variables: ID or name of order recipient */
     $id   = mysqli_real_escape_string($conn, $_POST['id']);
     $name = mysqli_real_escape_string($conn, $_POST['name']);
 
@@ -25,6 +25,7 @@
         }
     }
     
+    /* Set session variable */
     $_SESSION['selectedTable'] = $name;
 
     /* Select all in current order */
@@ -58,19 +59,19 @@
         }
 
 
-        /* Probably should check if entries exist before queries */
-
-        if($type == "issue") { /* Remove from master and add to cadet */
+        if($type == "issue") { /* Issue: Remove from master and add to cadet */
             /* Check master inventory if in stock */                
             $master_quantity_sql = "SELECT in_stock FROM $item WHERE size = '$size'";
             $master_quantity_result = mysqli_query($conn, $master_quantity_sql);
             $master_quantity = mysqli_fetch_assoc($master_quantity_result)["in_stock"];
 
+            /* Error if there is less than 1 in stock */
             if($master_quantity >= 1) {
                 /* Decrement master quantity */
                 $master_decrement_sql = "UPDATE $item SET in_stock = in_stock - $quantity, issued = issued + $quantity WHERE size = '$size'";
                 mysqli_query($conn, $master_decrement_sql);
 
+                /* Update row if item already exists, create new row if not */
                 if($cadet_item_exists >= 1) {
                     $cadet_update_sql = "UPDATE $name SET quantity = quantity + $quantity WHERE item = '$item' AND size = '$size'";
                     mysqli_query($conn, $cadet_update_sql);
@@ -83,23 +84,25 @@
                 header("Location: ../newOrder.php?error=nostock&item=". $item ."&size=" . $size);
                 exit();
             }
-        } else { /* Remove from cadet and add to master */
+        } else { /* Return: Remove from cadet and add to master */
             /* Check cadet inventory if exists */
             $cadet_quantity_sql = "SELECT quantity FROM $name WHERE size = '$size'";
             $cadet_quantity_result = mysqli_query($conn, $cadet_quantity_sql);
             $cadet_quantity = mysqli_fetch_assoc($cadet_quantity_result)["quantity"];
 
+            /* Error if cadet has less than 1 */
             if($cadet_quantity >= 1) {
                 /* Decrement cadet quantity */
                 $cadet_decrement_sql = "UPDATE $name SET quantity = quantity - $quantity WHERE size = '$size'";
                 mysqli_query($conn, $cadet_decrement_sql);
 
+                /* Delete row if all of item was removed */
                 if($cadet_quantity == $quantity) {
                     $delete_row_sql = "DELETE FROM $name WHERE item = '$item' AND size = '$size'";
                     mysqli_query($conn, $delete_row_sql);
                 }
 
-                echo $master_item_exists;
+                /* Update row if item exists in master inventory, create new row if not*/
                 if($master_item_exists >= 1) {
                     /* Update */
                     $master_update_sql = "UPDATE $item SET in_stock = in_stock + $quantity, issued = issued - $quantity WHERE size = '$size'";
@@ -117,7 +120,7 @@
             }
         }
 
-        /* Drop order table and recreate*/
+        /* Drop and recreate order table*/
         $sql = "DROP TABLE current_order";
         mysqli_query($conn, $sql);
 

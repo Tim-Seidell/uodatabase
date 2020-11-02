@@ -65,12 +65,9 @@
         }
     }
     
-    /* Remove from cadet, add to total, decrement issued */
-    else {
-        
+    else { /* Remove from cadet, decrement total, decrement issued */
         /* Check if item already exists in cadet's inventory */
         if($item_exists == 0) {
-
             /* Item does not exist in cadet's inventory, send back to page with error */
             header("Location: ../cadetView.php?error=noitem");
             exit();
@@ -80,8 +77,8 @@
             $row = mysqli_fetch_assoc($sql_result);
             if($quantity > $row['quantity']) {
 
-                /* Tried to return more than they have */
-                header("Location: ../cadetView.php?error=notenough");
+                /* Tried to remove more than they have */
+                header("Location: ../cadetView.php?error=notenough&quantity=" . $row['quantity'] . "&item=" . $item . "&size=" . $size);
                 exit();
             } else if($quantity == $row['quantity']) {
 
