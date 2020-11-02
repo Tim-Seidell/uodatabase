@@ -69,7 +69,7 @@
         /* Check if item already exists in cadet's inventory */
         if($item_exists == 0) {
             /* Item does not exist in cadet's inventory, send back to page with error */
-            header("Location: ../cadetView.php?error=noitem");
+            header("Location: ../cadetView.php?error=noitem&item=" . $item . "&size=" . $size);
             exit();
         } else {
 
