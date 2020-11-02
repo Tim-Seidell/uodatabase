@@ -21,12 +21,12 @@
 
                         /* Don't have item */
                         if($_GET['error'] == "noitem") {
-                            echo "<p class = \"text error\"><i class=\"fas fa-times\" style = \"float: left; margin-left: 4px;\"></i>You do not have" . $_GET['item'] . ": " . $_GET['size'] . "</p>";
+                            echo "<p class = \"text error\"><i class=\"fas fa-times\" style = \"float: left; margin-left: 4px;\"></i>You do not have " . $_GET['item'] . ": " . $_GET['size'] . "</p>";
                         }
 
                         /* Don't have enough of item */
                         if($_GET['error'] == "notenough") {
-                            echo "<p class = \"text error\"><i class=\"fas fa-times\" style = \"float: left; margin-left: 4px;\"></i>You only have" . $_GET['quantity'] . " of " . $_GET['item'] . ": " . $_GET['size'] . "</p>";
+                            echo "<p class = \"text error\"><i class=\"fas fa-times\" style = \"float: left; margin-left: 4px;\"></i>You only have " . $_GET['quantity'] . " of " . $_GET['item'] . ": " . $_GET['size'] . "</p>";
                         }
 
                         /* sql error */
